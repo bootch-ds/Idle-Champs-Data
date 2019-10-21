@@ -7,7 +7,7 @@
   <body>
     <h1>Idle Champions GameDefs</h1>
     <p>
-      <a href="~/GameDefs/hero_defs.json">Hero Defs</a>
+      <a href="GameDefs/hero_defs.json">Hero Defs</a>
 
     </p>
   </body>
