@@ -1,1043 +1,5923 @@
 
 {
 	"TableName": "HeroDefs",
-	"Headers": [
-		{
-			"PName": "Name",
-			"HeaderText": "Name",
-			"Format": ["Width:90"]
-		},
-		{
-			"PName": "HeroID",
-			"HeaderText": "Hero ID",
-			"Format": ["Width:70"]
-		},
-		{
-			"PName": "SeatID",
-			"HeaderText": "Slot",
-			"Format": ["Width:40"]
-		},
-		{
-			"PName": "AlignmentText",
-			"HeaderText": "Alignment",
-			"Format": ["Width:120"]
-		},
-		{
-			"PName": "FeatUnlock",
-			"HeaderText": "Unlocks",
-			"Format": ["WrapText", "Width:100"]
-		},
-		{
-			"PName": "STR",
-			"HeaderText": "STR",
-			"Format": ["HIDE", "Width:40"]
-		},
-		{
-			"PName": "DEX",
-			"HeaderText": "DEX",
-			"Format": ["HIDE", "Width:40"]
-		},
-		{
-			"PName": "CON",
-			"HeaderText": "CON",
-			"Format": ["HIDE", "Width:40"]
-		},
-		{
-			"PName": "INT",
-			"HeaderText": "INT",
-			"Format": ["HIDE", "Width:40"]
-		},
-		{
-			"PName": "WIS",
-			"HeaderText": "WIS",
-			"Format": ["HIDE", "Width:40"]
-		},
-		{
-			"PName": "CHA",
-			"HeaderText": "CHA",
-			"Format": ["HIDE", "Width:40"]
-		},
-		{
-			"PName": "Tags",
-			"HeaderText": "Tags",
-			"Format": ["WrapText"]
-		},
-		{
-			"PName": "SPACER",
-			"HeaderText": "",
-			"Format": []
-		}
-	],
 	"Values": [
 		{
-			"Name": "Bruenor",
 			"HeroID": 1,
-			"SeatID": 1,
-			"IsCore": 1,
+			"Name": "Bruenor",
+			"Full_Name": "Bruenor Battlehammer",
+			"Class": "Fighter",
+			"Race": "Shield Dwarf",
+			"Age": 252,
 			"Alignment1": "Neutral",
 			"Alignment2": "Good",
 			"AlignmentText": "Neutral Good",
-			"Stats": "",
-			"FeatUnlock": [635, 2315],
+			"AlignmentAbbr": "NG",
+			"Roles": [
+				"support"
+			],
+			"Group": "Companions of the Hall",
 			"STR": 17,
 			"DEX": 10,
 			"CON": 16,
 			"INT": 8,
 			"WIS": 13,
 			"CHA": 12,
-			"Tags": ["male", "dwarf", "fighter", "support", "neutral", "good", "companion"],
-			"Type": "Core Champions"
+			"Bio": "Hailing from the Spine of the World, Bruenor is the leader of Clan Battlehammer. He is close friends with the celebrated drow Drizzt Do'Urden and the halfling Regis. Rounding out the 'Companions of the Hall' are his two adopted human children: Catti-Brie and Wulfgar.",
+			"Attack_CD": 4,
+			"Ult_CD": 60,
+			"Swaps": "---",
+			"SeatID": 1,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				635,
+				2315
+			],
+			"Tags": [
+				"male",
+				"dwarf",
+				"fighter",
+				"support",
+				"neutral",
+				"good",
+				"companion"
+			],
+			"BaseAttack":
+			{
+				"id": 1,
+				"name": "Slice",
+				"description": "Bruenor slashes at the closest enemy with his axe.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -34,
+						"damage_frame": 2,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"2": 154
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 2,
+				"name": "Bash",
+				"description": "Bruenor delivers a devastating blow to the closest enemy.",
+				"long_description": "Bruenor delivers a devastating blow to a single enemy using his shield and axe.",
+				"graphic_id": 669,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.075,
+				"cooldown": 60,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -34,
+						"damage_frame": 38,
+						"hit_frames": [
+							2,
+							20
+						],
+						"shake_on_hit": 0.1,
+						"sound_frames":
+						{
+							"2": 158
+						}
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Deekin",
 			"HeroID": 28,
-			"SeatID": 1,
-			"IsCore": 0,
+			"Name": "Deekin",
+			"Full_Name": "Deekin",
+			"Class": "Bard",
+			"Race": "Kobold",
+			"Age": 28,
 			"Alignment1": "Neutral",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Neutral",
-			"Stats": "",
-			"FeatUnlock": [355, 1295],
+			"AlignmentAbbr": "N",
+			"Roles": [
+				"support"
+			],
+			"Group": "---",
 			"STR": 8,
 			"DEX": 14,
 			"CON": 15,
 			"INT": 10,
 			"WIS": 10,
 			"CHA": 18,
-			"Tags": ["male", "kobold", "bard", "support", "neutral", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "K'thriss",
-			"HeroID": 38,
+			"Bio": "A former member of the Dripping Fang clan, Deekin was once a Skald for a White Dragon named Tymofarrar. Once he was released from Tymofarrar's service, he set out to become the most amazing storyteller in all of Faerûn. He yearns to sing and tell stories of heroic deeds, but his songs often devolve into 'tales' of the doom that is coming to him or his companions. ",
+			"Attack_CD": 7.5,
+			"Ult_CD": 360,
+			"Swaps": "---",
 			"SeatID": 1,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				355,
+				1295
+			],
+			"Tags": [
+				"male",
+				"kobold",
+				"bard",
+				"support",
+				"neutral",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 117,
+				"name": "Building Suspense",
+				"description": "Deekin takes aim with his crossbow and fires at a random enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 7.5,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "deekin_arrow",
+						"shoot_frame": 6,
+						"hit_sound": 142,
+						"sound_frames":
+						{
+							"1": 163
+						}
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 118,
+				"name": "DOOOOOOOM!",
+				"description": "Deekin shouts DOOM as loudly as he can, dealing massive damage and buffing Story of Doom.",
+				"long_description": "Deekin shouts DOOM as loud as he can, dealing massive damage and setting Song of Doom to max stacks for 30 seconds.",
+				"graphic_id": 3429,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 360,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"damage_frame": 91,
+						"jump_center": true,
+						"refresh_damage_targets_at_hit": true,
+						"effect_frames":
+						{
+							"hit":
+							{
+								"effect_string": "max_upgrade_stacks_for_seconds,1148,30",
+								"activate_on_animation_cancelled": true
+							}
+						}
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 38,
+			"Name": "K'thriss",
+			"Full_Name": "K'thriss Drow'b",
+			"Class": "Warlock",
+			"Race": "Drow",
+			"Age": 320,
 			"Alignment1": "Choatic",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Choatic Neutral",
-			"Stats": "",
-			"FeatUnlock": [240, 865],
+			"AlignmentAbbr": "CN",
+			"Roles": [
+				"support"
+			],
+			"Group": "The C-Team",
 			"STR": 8,
 			"DEX": 16,
 			"CON": 10,
 			"INT": 13,
 			"WIS": 10,
 			"CHA": 18,
-			"Tags": ["male", "elf", "drow", "warlock", "support", "chaotic", "neutral", "cteam", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Turiel",
-			"HeroID": 49,
+			"Bio": "Curious, affable, and morbid, the drow heretic K'thriss Drow'b seeks the insane god-truth behind the veil of reality. As the 'C' Team's hoardsperson, he keeps an eye out for occult relics that could aid him in his unearthly quest.",
+			"Attack_CD": 6,
+			"Ult_CD": 270,
+			"Swaps": "---",
 			"SeatID": 1,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				240,
+				865
+			],
+			"Tags": [
+				"male",
+				"elf",
+				"drow",
+				"warlock",
+				"support",
+				"chaotic",
+				"neutral",
+				"cteam",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 169,
+				"name": "Dissonant Whispers",
+				"description": "K'thriss telepathically whispers a discordant melody that damages and slows a random enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "dissonant_whisper",
+						"shoot_frame": 4,
+						"effect_on_monsters":
+						{
+							"effect_string": "monster_speed_reduce,50",
+							"active_graphic_id": 1507,
+							"active_graphic_y": -50,
+							"for_time": 3,
+							"after_damage": true
+						}
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 170,
+				"name": "Tentacular Spectacular",
+				"description": "K'thriss summons a horde of tentacles that damage and slow all enemies.",
+				"long_description": "K'thriss summons a horde of tentacles across the battlefield that damage and slow all enemies.",
+				"graphic_id": 4743,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.033,
+				"cooldown": 270,
+				"animations": [
+					{
+						"type": "kthriss_ultimate",
+						"damage_frame": 10,
+						"effect_on_monsters":
+						{
+							"effect_string": "monster_speed_reduce,33",
+							"active_graphic_id": 1507,
+							"active_graphic_y": -70,
+							"after_damage": true,
+							"for_time": 10
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 49,
+			"Name": "Turiel",
+			"Full_Name": "Turiel",
+			"Class": "Cleric",
+			"Race": "Aasimar",
+			"Age": 121,
 			"Alignment1": "Lawful",
 			"Alignment2": "Good",
 			"AlignmentText": "Lawful Good",
-			"Stats": "",
-			"FeatUnlock": [420, 1555],
+			"AlignmentAbbr": "LG",
+			"Roles": [
+				"support"
+			],
+			"Group": "CNE Original",
 			"STR": 9,
 			"DEX": 11,
 			"CON": 16,
 			"INT": 13,
 			"WIS": 17,
 			"CHA": 12,
-			"Tags": ["male", "aasimar", "cleric", "support", "lawful", "good", "cneoriginal", "event"],
-			"Type": "Event Champions"
+			"Bio": "Wherever the aasimar known as Turiel goes, devils and demons know to tread lightly. Acting on orders of his divine patron, Bahamut, Turiel works tirelessly to bring law, order, and justice to Toril. When not busy with inquisitions or crusades, Turiel calls the endless libraries of Candlekeep his home, studying ancient tomes and seeking guidance for his next holy mission.",
+			"Attack_CD": 10,
+			"Ult_CD": 320,
+			"Swaps": "---",
+			"SeatID": 1,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				420,
+				1555
+			],
+			"Tags": [
+				"male",
+				"aasimar",
+				"cleric",
+				"support",
+				"lawful",
+				"good",
+				"cneoriginal",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 226,
+				"name": "Sacred Flame",
+				"description": "Turiel points at a random enemy and flame-like radiance strikes them from above.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 10,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "sacred_flame",
+						"shoot_frame": 13,
+						"shoot_sound": 164
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 227,
+				"name": "Beacon of Light",
+				"description": "Turiel pushes back enemies and slowly increases party damage for 30 seconds as long as no one in the party is attacked.",
+				"long_description": "Turiel pushes back enemies and slowly increases party damage for 30 seconds as long as no one in the party is attacked.",
+				"graphic_id": 6283,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0,
+				"cooldown": 320,
+				"animations": [
+					{
+						"type": "turiel_ult",
+						"damage_frame": 13,
+						"amount": 25,
+						"duration": 30,
+						"reduction_modifier": 0.5,
+						"no_damage_display": true,
+						"sequences": [
+							{
+								"animation_sequence": 4
+							},
+							{
+								"animation_sequence": 7,
+								"effect_frames":
+								{
+									"1":
+									{
+										"effect_string": "enemies_pushback,33,200"
+									}
+								}
+							},
+							{
+								"animation_sequence": 8
+							}
+						]
+					}
+				],
+				"tags": [
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		},
 		{
-			"Name": "Celeste",
 			"HeroID": 2,
-			"SeatID": 2,
-			"IsCore": 1,
+			"Name": "Celeste",
+			"Full_Name": "Celeste",
+			"Class": "Cleric",
+			"Race": "Human",
+			"Age": 36,
 			"Alignment1": "Lawful",
 			"Alignment2": "Good",
 			"AlignmentText": "Lawful Good",
-			"Stats": "",
-			"FeatUnlock": [385, 1415],
+			"AlignmentAbbr": "LG",
+			"Roles": [
+				"support",
+				"healing"
+			],
+			"Group": "---",
 			"STR": 14,
 			"DEX": 8,
 			"CON": 13,
 			"INT": 12,
 			"WIS": 15,
 			"CHA": 10,
-			"Tags": ["female", "human", "cleric", "support", "healing", "lawful", "good"],
-			"Type": "Core Champions"
+			"Bio": "It was only when Valindra Shadowmantle's undead horde was clawing at her door that the god Selûne came to Celeste. A wave of divine energy burst out from Celeste, annihilating the skeletons and zombies, leaving her unconscious. When she came to, she understood. She needed to assemble those who were dedicated to fighting evil and serve her god and her people.",
+			"Attack_CD": 6,
+			"Ult_CD": 180,
+			"Swaps": "---",
+			"SeatID": 2,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				385,
+				1415
+			],
+			"Tags": [
+				"female",
+				"human",
+				"cleric",
+				"support",
+				"healing",
+				"lawful",
+				"good"
+			],
+			"BaseAttack":
+			{
+				"id": 3,
+				"name": "Guiding Bolt",
+				"description": "A flash of light streaks towards the closest enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "guiding_bolt",
+						"shoot_frame": 13,
+						"shoot_sound": 164
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 4,
+				"name": "Flame Strike",
+				"description": "Celeste calls forth a pillar of flame centered on a random enemy.",
+				"long_description": "Celeste prays for the power of Selûne to call forth a pillar of flame on a random enemy, burning all nearby enemies as well. Simultaneously, a pillar of light heals living party members to full health.",
+				"graphic_id": 671,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 200,
+				"damage_modifier": 0.00833,
+				"cooldown": 180,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "flame_strike",
+						"unique_hit_cooldown_time": 0.5,
+						"projectile_multi_hits": true,
+						"shoot_sound": 168,
+						"effect_frames":
+						{
+							"projectile":
+							{
+								"effect_string": "heal_all_to_percent,100",
+								"activate_on_animation_cancelled": true
+							}
+						},
+						"visual_effect_frames":
+						{
+							"projectile":
+							{
+								"effect": "formation_heal_glow"
+							}
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"aoe",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		},
 		{
-			"Name": "Regis",
 			"HeroID": 20,
-			"SeatID": 2,
-			"IsCore": 0,
+			"Name": "Regis",
+			"Full_Name": "Regis",
+			"Class": "Rogue",
+			"Race": "Halfling",
+			"Age": 51,
 			"Alignment1": "Choatic",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Choatic Neutral",
-			"Stats": "",
-			"FeatUnlock": [470, 1745],
+			"AlignmentAbbr": "CN",
+			"Roles": [
+				"support",
+				"healing"
+			],
+			"Group": "Companions of the Hall",
 			"STR": 8,
 			"DEX": 19,
 			"CON": 14,
 			"INT": 13,
 			"WIS": 10,
 			"CHA": 15,
-			"Tags": ["male", "halfling", "rogue", "support", "healing", "chaotic", "neutral", "companion", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Donaar",
-			"HeroID": 34,
+			"Bio": "As a poor urchin on the streets of Calimport, Regis quickly learned that survival often requires bending the rules in your favor. He fled to the north to avoid capture after stealing his former master's magical ruby pendant. Eventually, he found companionship amongst the Companions of the Hall, becoming one of Bruenor Battlehammer's most trusted confidants. Bruenor was the one who gifted Regis with the nickname 'Rumblebelly' due to the halfling's insatiable appetite. Regis would prefer nothing more than to relax in the sun with a full belly near his home in Ten-Towns and fish for knucklehead trout, the source of all of his scrimshaw carvings. But when his friends need help, Regis is always there for them. He never sees himself as the hero, even though his true friends know better.",
+			"Attack_CD": 7.8,
+			"Ult_CD": 300,
+			"Swaps": "---",
 			"SeatID": 2,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				470,
+				1745
+			],
+			"Tags": [
+				"male",
+				"halfling",
+				"rogue",
+				"support",
+				"healing",
+				"chaotic",
+				"neutral",
+				"companion",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 71,
+				"name": "Reluctant Stab",
+				"description": "Regis reluctantly stabs the nearest enemy with his dagger.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 7.8,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -40,
+						"hit_frames": [
+							2
+						],
+						"damage_frame": 12,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"2": 154
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 72,
+				"name": "Ruby Brilliance",
+				"description": "Regis attacks using the power of his ruby pendant.",
+				"long_description": "Regis holds up his ruby pendant, mesmerizing all enemies and slowing them for 15 seconds. Enemies take 200% additional damage while slowed. He also damages all enemies.",
+				"graphic_id": 2002,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.01,
+				"cooldown": 300,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "empty",
+						"shoot_frame": 31,
+						"sound_frames":
+						{
+							"39": 174
+						},
+						"effect_on_monsters":
+						{
+							"effect_string": "effect_def,400"
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 34,
+			"Name": "Donaar",
+			"Full_Name": "Donaar Blit'zen",
+			"Class": "Paladin",
+			"Race": "Dragonborn",
+			"Age": 19,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [330, 1195],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support",
+				"healing"
+			],
+			"Group": "The C-Team",
 			"STR": 18,
 			"DEX": 8,
 			"CON": 14,
 			"INT": 10,
 			"WIS": 10,
 			"CHA": 16,
-			"Tags": ["male", "dragonborn", "paladin", "support", "healing", "chaotic", "good", "event", "cteam"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Korth",
-			"HeroID": 45,
+			"Bio": "This copper, draconic gentleman claims to know more than one hundred different dragons. Chromatic, metallic -- just tons and tons of dragons -- I'm hoping we can leverage some of these connections in our dealings. None of the dragons I've contacted have gotten back to me, but they're probably just very busy right now. This is one of the busiest times for dragons... or so I've been told by my new best friend, Donaar Blit'zen.",
+			"Attack_CD": 3.8,
+			"Ult_CD": 260,
+			"Swaps": "---",
 			"SeatID": 2,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				330,
+				1195
+			],
+			"Tags": [
+				"male",
+				"dragonborn",
+				"paladin",
+				"support",
+				"healing",
+				"chaotic",
+				"good",
+				"event",
+				"cteam"
+			],
+			"BaseAttack":
+			{
+				"id": 139,
+				"name": "Command",
+				"description": "Donaar targets a random enemy, casting a random Command on them and doing a small amount of psychic damage",
+				"long_description": "Hold: stuns enemy for $(attack_indexed_effect_amount 0)s; Flee: Enemy pushed back, taking $(attack_indexed_effect_amount 1)% more damage for 10s; Fear: Enemy has $(attack_indexed_effect_amount 2)% chance attacks miss for 5s; Drop: Enemy drops $(attack_indexed_effect_amount 3)% bonus gold on death",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 3.8,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"shoot_frame": 22,
+						"projectile": "psychic_damage",
+						"effects_on_monsters": [
+							{
+								"effect_string": "stun,3,none,4210"
+							},
+							{
+								"effect_string": "increase_monster_damage,100",
+								"for_time": 10,
+								"active_graphic_id": 4209,
+								"active_graphic_y": -60,
+								"push_back": 20,
+								"one_per_hero": true
+							},
+							{
+								"effect_string": "attack_miss_chance,50",
+								"for_time": 5,
+								"active_graphic_id": 4208,
+								"active_graphic_y": -80,
+								"one_per_hero": true
+							},
+							{
+								"effect_string": "chance_monster_extra_gold,50,100",
+								"active_graphic_id": 4207,
+								"active_graphic_y": -100,
+								"one_per_hero": true
+							}
+						],
+						"random_monster_effect": true
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 140,
+				"name": "Acid Vomit",
+				"description": "Donaar attacks the nearest enemies with his comically oversized sword, then vomits acid.",
+				"long_description": "Donaar attacks the nearest enemies with his comically oversized sword, then vomits acid in a puddle which deals damage to enemies who walk through it.",
+				"graphic_id": 4274,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 200,
+				"damage_modifier": 0.02,
+				"cooldown": 260,
+				"animations": [
+					{
+						"type": "donaar_ultimate",
+						"damage_frame": 4,
+						"animation_sequence_name": "attack_b",
+						"pool_time": 30,
+						"pool_interval": 0.6,
+						"damage_per_second_modifier": 0.2
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 45,
+			"Name": "Korth",
+			"Full_Name": "Korth",
+			"Class": "Samurai (Fighter)",
+			"Race": "Lizardfolk",
+			"Age": 55,
 			"Alignment1": "Neutral",
 			"Alignment2": "Evil",
 			"AlignmentText": "Neutral Evil",
-			"Stats": "",
-			"FeatUnlock": [265, 965],
+			"AlignmentAbbr": "NE",
+			"Roles": [
+				"support",
+				"healing"
+			],
+			"Group": "CNE Original",
 			"STR": 14,
 			"DEX": 18,
 			"CON": 16,
 			"INT": 10,
 			"WIS": 13,
 			"CHA": 12,
-			"Tags": ["male", "lizardfolk", "fighter", "samurai", "support", "healing", "neutral", "evil", "event", "cneoriginal"],
-			"Type": "Event Champions"
+			"Bio": "Raised as a gladiator in the pit arenas of Kara-Tur, Korth has since traveled the world studying fighting styles and the art of war. Korth is infamous for his skill and efficiency in battle - and for his ruthlessness, as he never spares the lives of his opponents. Those who cross Korth's path do so at their own risk.",
+			"Attack_CD": 5.5,
+			"Ult_CD": 150,
+			"Swaps": "---",
+			"SeatID": 2,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				265,
+				965
+			],
+			"Tags": [
+				"male",
+				"lizardfolk",
+				"fighter",
+				"samurai",
+				"support",
+				"healing",
+				"neutral",
+				"evil",
+				"event",
+				"cneoriginal"
+			],
+			"BaseAttack":
+			{
+				"id": 212,
+				"name": "Samurai Slice",
+				"description": "Korth charges out and attacks the nearest enemy with his samurai sword.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 5.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"damage_frame": 3,
+						"target_offset_x": -50
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 213,
+				"name": "Hungry Jaws",
+				"description": "Korth leaps to the nearest enemy and ferociously bites them.",
+				"long_description": "Korth leaps to the nearest enemy and ferociously bites them, causing massive damage and a bleed for 4x the base damage over 10 sec.",
+				"graphic_id": 5731,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.033,
+				"cooldown": 150,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"power_up_sequence":
+						{
+							"start_frame": 0,
+							"end_frame": 13
+						},
+						"jump_out_sequence":
+						{
+							"start_frame": 14,
+							"end_frame": 22
+						},
+						"start_frame": 23,
+						"end_frame": 45,
+						"jump_back_sequence":
+						{
+							"start_frame": 46,
+							"end_frame": 53
+						},
+						"cooldown_sequence":
+						{
+							"start_frame": 54,
+							"end_frame": 59
+						},
+						"jump_back_speed": 4000,
+						"damage_frame": 30,
+						"damage_over_time":
+						{
+							"percent": 4,
+							"time": 10,
+							"tick_time": 0.2,
+							"damage_is_additional": true,
+							"pop_damage": true
+						},
+						"target_offset_x": -80,
+						"target_offset_y": 30,
+						"jump_height": 180,
+						"shake_on_hit": 0.1
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Nayeli",
 			"HeroID": 3,
-			"SeatID": 3,
-			"IsCore": 1,
+			"Name": "Nayeli",
+			"Full_Name": "Nayeli Goldflower",
+			"Class": "Paladin",
+			"Race": "Human",
+			"Age": 39,
 			"Alignment1": "Lawful",
 			"Alignment2": "Good",
 			"AlignmentText": "Lawful Good",
-			"Stats": "",
-			"FeatUnlock": [255, 960],
+			"AlignmentAbbr": "LG",
+			"Roles": [
+				"support",
+				"tanking"
+			],
+			"Group": "---",
 			"STR": 16,
 			"DEX": 12,
 			"CON": 16,
 			"INT": 8,
 			"WIS": 10,
 			"CHA": 14,
-			"Tags": ["female", "human", "paladin", "tanking", "support", "lawful", "good"],
-			"Type": "Core Champions"
+			"Bio": "A once trusted guardian and advisor of Duke Maldwyn of Daggerford, Nayeli Goldflower is now a paladin without a lord who wanders Toril on the hunt for devils and those who would summon and commune with the infernal. She worships Tyr, the god of justice, who has blessed her sword to seek out and destroy any infernal presence.",
+			"Attack_CD": 6.7,
+			"Ult_CD": 120,
+			"Swaps": "---",
+			"SeatID": 3,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				255,
+				960
+			],
+			"Tags": [
+				"female",
+				"human",
+				"paladin",
+				"tanking",
+				"support",
+				"lawful",
+				"good"
+			],
+			"BaseAttack":
+			{
+				"id": 5,
+				"name": "Swing",
+				"description": "Nayeli cleaves all targets near the closest enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 150,
+				"damage_modifier": 1,
+				"cooldown": 6.7,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -34,
+						"damage_frame": 2,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"2": 194
+						}
+					}
+				],
+				"tags": [
+					"melee",
+					"aoe"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 6,
+				"name": "Banishing Smite",
+				"description": "Nayeli deals massive damage to a random enemy and stuns all enemies.",
+				"long_description": "Nayeli leaps to a random enemy, dealing massive damage and stunning all enemies.",
+				"graphic_id": 677,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03333,
+				"cooldown": 120,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"shake_on_hit": 0.1,
+						"power_up_sequence":
+						{
+							"start_frame": 0,
+							"end_frame": 29,
+							"sound_frames":
+							{
+								"2": 198
+							}
+						},
+						"sequences": [
+							{
+								"start_frame": 30,
+								"damage_frame": 32,
+								"end_frame": 42,
+								"visual_effect_frames":
+								{
+									"hit":
+									{
+										"effect": "animated_clip",
+										"graphic_id": 625,
+										"sort_offset": -9999,
+										"offset_x": 70
+									}
+								},
+								"effect_frames":
+								{
+									"hit+0.35":
+									{
+										"effect_string": "damage_and_stun,0,5,none,0,626",
+										"activate_on_animation_cancelled": true
+									}
+								}
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Gromma",
 			"HeroID": 16,
-			"SeatID": 3,
-			"IsCore": 0,
+			"Name": "Gromma",
+			"Full_Name": "Gromma Nander",
+			"Class": "Druid",
+			"Race": "Tortle",
+			"Age": 80,
 			"Alignment1": "Lawful",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Lawful Neutral",
-			"Stats": "",
-			"FeatUnlock": [280, 1085],
+			"AlignmentAbbr": "LN",
+			"Roles": [
+				"support",
+				"tanking",
+				"dps"
+			],
+			"Group": "CNE Original",
 			"STR": 14,
 			"DEX": 10,
 			"CON": 18,
 			"INT": 12,
 			"WIS": 17,
 			"CHA": 13,
-			"Tags": ["female", "tortle", "druid", "dps", "support", "tanking", "lawful", "neutral", "event", "cneoriginal"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Binwin",
-			"HeroID": 27,
+			"Bio": "Extremely elderly for a Tortle, Gromma Nander grew discontent with her secluded life after giving birth to her offspring. Once they were old enough to fend for themselves, she ventured back out into the world to learn as much as she could about the strange creatures that inhabit it. Gromma is a wise and inquisitive Tortle who is quick to friendship but slow to trust. She carries a pouch of smooth colored stones that she has collected on her journey and walks with the aid of a battle-worn spear.",
+			"Attack_CD": 6.9,
+			"Ult_CD": 120,
+			"Swaps": "---",
 			"SeatID": 3,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				280,
+				1085
+			],
+			"Tags": [
+				"female",
+				"tortle",
+				"druid",
+				"dps",
+				"support",
+				"tanking",
+				"lawful",
+				"neutral",
+				"event",
+				"cneoriginal"
+			],
+			"BaseAttack":
+			{
+				"id": 57,
+				"name": "Slow and Steady",
+				"description": "Gromma Nander, moving faster than you would expect for an 80 year old Tortle, stabs the closest enemy with her spear.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6.9,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -84,
+						"damage_frame": 2,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"2": 154
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 59,
+				"name": "Wall Of Stone",
+				"description": "Gromma summons a wall of stone, knocking enemies back and blocking their movement.",
+				"long_description": "A wall of stone bursts up out of the ground under a random enemy. The targeted enemy and any enemies in the column that the wall appears in take damage and are knocked backwards. The wall lasts for 15 seconds, and for that time enemies cannot pass it.",
+				"graphic_id": 1487,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.038,
+				"cooldown": 120,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "wall_of_stone",
+						"shoot_frame": 10,
+						"projectile_count": 1,
+						"hit_sound": 81,
+						"aoe_rect":
+						{
+							"x": -20,
+							"y": -700,
+							"width": 40,
+							"height": 1400
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 27,
+			"Name": "Binwin",
+			"Full_Name": "Binwin Bronzebottom",
+			"Class": "Fighter / Barbarian",
+			"Race": "Mountain Dwarf",
+			"Age": 39,
 			"Alignment1": "Lawful",
 			"Alignment2": "Good",
 			"AlignmentText": "Lawful Good",
-			"Stats": "",
-			"FeatUnlock": [195, 735],
+			"AlignmentAbbr": "LG",
+			"Roles": [
+				"dps"
+			],
+			"Group": "---",
 			"STR": 18,
 			"DEX": 8,
 			"CON": 18,
 			"INT": 10,
 			"WIS": 11,
 			"CHA": 14,
-			"Tags": ["male", "dwarf", "fighter", "barbarian", "dps", "lawful", "good", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Spurt",
-			"HeroID": 43,
+			"Bio": "A grumpy and headstrong dwarf with a penchant for springing traps rather than disarming them, if Binwin's not the first into battle then he's disappointed. There's nary a door, tankard, or acid pit that hasn't felt the wrath of Binwin Bronzebottom at one time or another.",
+			"Attack_CD": 6,
+			"Ult_CD": 195,
+			"Swaps": "---",
 			"SeatID": 3,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				195,
+				735
+			],
+			"Tags": [
+				"male",
+				"dwarf",
+				"fighter",
+				"barbarian",
+				"dps",
+				"lawful",
+				"good",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 107,
+				"name": "Twin Axes",
+				"description": "Binwin attacks the front-most enemy with his twin axes, Rook and Ruin.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"target_offset_x": -34,
+						"damage_frame": 2,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"2": 154
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 108,
+				"name": "Barrel Roll",
+				"description": "Binwin hops onto a sturdy wooden barrel and rides toward a single enemy, creating a path of destruction in his wake.",
+				"long_description": "Binwin hops onto a sturdy wooden barrel and rides toward a single enemy, dealing damage along the way. When he reaches the targeted enemy, the barrel explodes, dealing AOE damage and slowing all affected enemies.",
+				"graphic_id": 3230,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 195,
+				"animations": [
+					{
+						"type": "binwin_ultimate",
+						"power_up_sequence":
+						{
+							"start_frame": 0,
+							"end_frame": 10
+						},
+						"sequences": [
+							{
+								"start_frame": 11,
+								"end_frame": 21
+							}
+						],
+						"radius": 250
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 43,
+			"Name": "Spurt",
+			"Full_Name": "Spurt",
+			"Class": "Inventor (Rogue)",
+			"Race": "Kobold",
+			"Age": 0.0301369863,
 			"Alignment1": "Lawful",
 			"Alignment2": "Evil",
 			"AlignmentText": "Lawful Evil",
-			"Stats": "",
-			"FeatUnlock": [375, 1405],
+			"AlignmentAbbr": "LE",
+			"Roles": [
+				"support"
+			],
+			"Group": "---",
 			"STR": 7,
 			"DEX": 15,
 			"CON": 12,
 			"INT": 8,
 			"WIS": 7,
 			"CHA": 8,
-			"Tags": ["male", "kobold", "rogue", "support", "lawful", "evil", "event"],
-			"Type": "Event Champions"
+			"Bio": "Spurt the Kobold Inventor is crafty and quick with his hands. He builds improvised weapons in the hope of gaining some new advantage in combat. Spurt never knew he would have such lasting appeal when he met a mighty group of adventurers in a cave, but here we are. Packed to the gills with his 'awesome' inventions this clever kobold brings his 11-days of life experiences to the Champions, along with a really cool 'Centi-pult'!",
+			"Attack_CD": 7.5,
+			"Ult_CD": 120,
+			"Swaps": "---",
+			"SeatID": 3,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				375,
+				1405
+			],
+			"Tags": [
+				"male",
+				"kobold",
+				"rogue",
+				"support",
+				"lawful",
+				"evil",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 198,
+				"name": "Wasp Nest",
+				"description": "Spurt tosses a wasp nest at a random enemy, dealing damage.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 7.5,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "wasp_bag",
+						"shoot_frame": 19
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 199,
+				"name": "You Dead!",
+				"description": "Spurt tosses a wasp nest at a stalking giant, and then is immediately killed.",
+				"long_description": "Spurt tosses a wasp nest at a stalking giant, and then is immediately killed by a giant hammer, which damages all Enemies on screen. Spurt then comes back as a spirit, increasing the effects of his abilities until he revives.",
+				"graphic_id": 5454,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 120,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"power_up_sequence":
+						{
+							"animation_sequence_name": "attack",
+							"visual_effect_frames":
+							{
+								"19":
+								{
+									"effect": "projectile",
+									"projectile": "wasp_bag",
+									"offset_x": 1600,
+									"offset_y": -200
+								}
+							}
+						},
+						"powerup_after_jump": true,
+						"damage_frame": 80,
+						"jump_center": true,
+						"effect_frames":
+						{
+							"jump_back":
+							{
+								"effect_string": "spurt_spirit",
+								"apply_to_hero": true,
+								"activate_on_animation_cancelled": true
+							}
+						},
+						"visual_effect_frames":
+						{
+							"-22":
+							{
+								"effect": "animated_clip",
+								"graphic_id": 5490,
+								"scale": 1.15
+							}
+						},
+						"fade_back_in": true,
+						"require_targets_to_start": false,
+						"refresh_damage_targets_at_hit": true
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			}
 		},
 		{
-			"Name": "Jarlaxle",
 			"HeroID": 4,
-			"SeatID": 4,
-			"IsCore": 1,
+			"Name": "Jarlaxle",
+			"Full_Name": "Jarlaxle Baenre",
+			"Class": "Rogue",
+			"Race": "Drow",
+			"Age": 245,
 			"Alignment1": "Neutral",
 			"Alignment2": "Evil",
 			"AlignmentText": "Neutral Evil",
-			"Stats": "",
-			"FeatUnlock": [385, 1530],
+			"AlignmentAbbr": "NE",
+			"Roles": [
+				"dps",
+				"gold"
+			],
+			"Group": "---",
 			"STR": 10,
 			"DEX": 18,
 			"CON": 13,
 			"INT": 16,
 			"WIS": 11,
 			"CHA": 14,
-			"Tags": ["male", "elf", "drow", "rogue", "dps", "gold", "neutral", "evil"],
-			"Type": "Core Champions"
+			"Bio": "Jarlaxle is a flamboyant, swashbuckling drow who leads Bregan D'aerthe, a band of drow outcasts and renegades from Menzoberranzan. Jarlaxle secretly controls the northern city of Luskan from the shadows by manipulating the five High Captains who rule the city.",
+			"Attack_CD": 5,
+			"Ult_CD": 300,
+			"Swaps": "---",
+			"SeatID": 4,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				385,
+				1530
+			],
+			"Tags": [
+				"male",
+				"elf",
+				"drow",
+				"rogue",
+				"dps",
+				"gold",
+				"neutral",
+				"evil"
+			],
+			"BaseAttack":
+			{
+				"id": 7,
+				"name": "Rapier",
+				"description": "Jarlaxle attacks the furthest enemy. If it dies, he keeps on attacking, halving his damage each time.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "back",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "backstab",
+						"target_offset_x": 180,
+						"sound_frames":
+						{
+							"2": 179
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 8,
+				"name": "Raiding Party",
+				"description": "Jarlaxle summons the Bregan D'aerthe to attack enemies in the formation from afar with cannon fire.",
+				"long_description": "Jarlaxle summons the Bregan D'aerthe to attack enemies in the formation from afar with cannon fire.",
+				"graphic_id": 674,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 200,
+				"damage_modifier": 0.0075,
+				"cooldown": 300,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "raiding_party",
+						"shoot_frame": 30,
+						"shoot_offset_y": -255,
+						"unique_hit_cooldown_time": 0.5,
+						"projectile_multi_hits": true,
+						"aoe_all": true
+					}
+				],
+				"tags": [
+					"ranged",
+					"aoe",
+					"ultimate"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			}
 		},
 		{
-			"Name": "Stoki",
 			"HeroID": 14,
-			"SeatID": 4,
-			"IsCore": 0,
+			"Name": "Stoki",
+			"Full_Name": "Stoki",
+			"Class": "Monk",
+			"Race": "Gnome",
+			"Age": 45,
 			"Alignment1": "Lawful",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Lawful Neutral",
-			"Stats": "",
-			"FeatUnlock": [310, 1260],
+			"AlignmentAbbr": "LN",
+			"Roles": [
+				"support",
+				"gold"
+			],
+			"Group": "CNE Original",
 			"STR": 11,
 			"DEX": 18,
 			"CON": 15,
 			"INT": 13,
 			"WIS": 17,
 			"CHA": 12,
-			"Tags": ["female", "gnome", "monk", "support", "gold", "lawful", "neutral", "event", "cneoriginal"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Ishi",
-			"HeroID": 31,
+			"Bio": "Born Stami Gackle, she fled her home after a terrible accident at a young age and joined a monastery of the Even-Handed to study ki. An adept monk and extremely capable adventurer, her thoughtful approach to problems has earned her a reputation as an uncommonly stoic Rock Gnome.",
+			"Attack_CD": 5.75,
+			"Ult_CD": 160,
+			"Swaps": "---",
 			"SeatID": 4,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				310,
+				1260
+			],
+			"Tags": [
+				"female",
+				"gnome",
+				"monk",
+				"support",
+				"gold",
+				"lawful",
+				"neutral",
+				"event",
+				"cneoriginal"
+			],
+			"BaseAttack":
+			{
+				"id": 42,
+				"name": "Flurry of Blows",
+				"description": "Stoki leaps out and attacks random enemies with her fists.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 5.75,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"max_target_unique_hits": 1,
+						"sequences": [
+							{
+								"start_frame": 0,
+								"damage_frame": 25,
+								"end_frame": 25,
+								"hit_frames": [
+									5,
+									10,
+									15,
+									20
+								],
+								"sound_frames":
+								{
+									"5": 199,
+									"10": 199,
+									"15": 199,
+									"20": 199
+								},
+								"target_offset_x": -60
+							}
+						],
+						"unique_hit_on_damage_only": true
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 43,
+				"name": "Quivering Palm",
+				"description": "Stoki leaps around the screen attacking random enemies and causing damage over time.",
+				"long_description": "Stoki leaps out and attacks five random enemies with extremely powerful palm thrusts. Over the next 10 seconds, all affected enemies take massive damage over time.",
+				"graphic_id": 1117,
+				"target": "random",
+				"num_targets": 5,
+				"aoe_radius": 0,
+				"damage_modifier": 0.025,
+				"cooldown": 160,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"shake_on_hit": 0.1,
+						"damage_over_time":
+						{
+							"percent": 0.9,
+							"time": 10,
+							"tick_time": 0.02
+						},
+						"sequences": [
+							{
+								"start_frame": 0,
+								"damage_frame": 20,
+								"end_frame": 25,
+								"sound_frames":
+								{
+									"2": 174
+								},
+								"target_offset_x": -70
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 31,
+			"Name": "Ishi",
+			"Full_Name": "Ishi Snaggletooth",
+			"Class": "Fighter / Rogue",
+			"Race": "Kobold",
+			"Age": 27,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [265, 1075],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"dps",
+				"gold"
+			],
+			"Group": "---",
 			"STR": 10,
 			"DEX": 18,
 			"CON": 16,
 			"INT": 12,
 			"WIS": 14,
 			"CHA": 15,
-			"Tags": ["female", "kobold", "fighter", "rogue", "chaotic", "good", "dps", "gold", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Paultin",
-			"HeroID": 39,
+			"Bio": "Ishi Snaggletooth hails from a warren of Kobolds living in the sewers under Baldur's Gate. Always the type to be more curious than careful, she accidentally stowed away on a ship headed to Port Nyanzaru. There, she met her dear friend, the Firbolg Littlefox. Often shunned by humans, Ishi hopes to prove herself as a true hero however she can. Ishi's biggest claim to fame is the defeat of the known swordsman, Hershel Von Saberburg, and since that day she's touted herself as a renowned duelist to anyone that'll listen to her.",
+			"Attack_CD": 6,
+			"Ult_CD": 420,
+			"Swaps": "---",
 			"SeatID": 4,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				265,
+				1075
+			],
+			"Tags": [
+				"female",
+				"kobold",
+				"fighter",
+				"rogue",
+				"chaotic",
+				"good",
+				"dps",
+				"gold",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 128,
+				"name": "Quick Strike",
+				"description": "Ishi attacks the front-most enemy a quarter second faster than anyone else.",
+				"long_description": "Ishi attacks the front-most enemy. She always attacks 0.25 seconds faster than the fastest member of the formation, or every 6 seconds if she is the only Champion",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"target_offset_x": -20,
+						"damage_frame": 4,
+						"dynamic_cooldown":
+						{
+							"below_fastest": 0.25,
+							"default": 6
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 129,
+				"name": "Confidence Boost",
+				"description": "For $ishi_ult_time seconds, Ishi's damage is increased by 100% for each non-human in the formation (multiplicative)",
+				"long_description": "For $ishi_ult_time seconds, Ishi's damage is increased by 100% for each non-human in the formation (multiplicative)",
+				"graphic_id": 3699,
+				"target": "none",
+				"num_targets": 0,
+				"aoe_radius": 0,
+				"damage_modifier": 0,
+				"cooldown": 420,
+				"animations": [
+					{
+						"type": "ishi_ultimate",
+						"ishi_effect": "effect_def,189",
+						"no_damage_display": true
+					}
+				],
+				"tags": [
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 39,
+			"Name": "Paultin",
+			"Full_Name": "Paultin Seppa",
+			"Class": "Bard",
+			"Race": "Human",
+			"Age": 25,
 			"Alignment1": "Choatic",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Choatic Neutral",
-			"Stats": "",
-			"FeatUnlock": [600, 2445],
+			"AlignmentAbbr": "CN",
+			"Roles": [
+				"support",
+				"gold"
+			],
+			"Group": "Waffle Crew",
 			"STR": 14,
 			"DEX": 15,
 			"CON": 14,
 			"INT": 14,
 			"WIS": 12,
 			"CHA": 18,
-			"Tags": ["male", "human", "bard", "support", "gold", "chaotic", "neutral", "wafflecrew", "event"],
-			"Type": "Event Champions"
+			"Bio": "Paultin and his 'son' Simon (AKA Murderbot) have been adventuring as part of the Waffle Crew for many years. Paultin is a wise-cracking adventurer who is more at home at a tavern than anywhere else. He cares deeply for those he considers his friends and will leap into action if anyone hurts them. ",
+			"Attack_CD": 4,
+			"Ult_CD": 200,
+			"Swaps": "---",
+			"SeatID": 4,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				600,
+				2445
+			],
+			"Tags": [
+				"male",
+				"human",
+				"bard",
+				"support",
+				"gold",
+				"chaotic",
+				"neutral",
+				"wafflecrew",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 171,
+				"name": "Poison Dart",
+				"description": "Simon attacks with a poisoned dart. Paultin attacks too, sometimes.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 4,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4,
+				"animations": [
+					{
+						"type": "paultin_base",
+						"shoot_offset_x": -35,
+						"shoot_offset_y": -75,
+						"shoot_frame": 3
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 172,
+				"name": "Thunderwave",
+				"description": "Paultin swings the Sunsword, creating a shockwave that deals massive damage to all enemies.",
+				"long_description": "Paultin swings the Sunsword, dealing massive damage to all enemies. The damage is increased by the current enemy enrage multiplier.",
+				"graphic_id": 4855,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.025,
+				"cooldown": 200,
+				"animations": [
+					{
+						"type": "paultin_ultimate",
+						"tooltip_damage_override": "paultin_ult"
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		},
 		{
-			"Name": "Calliope",
 			"HeroID": 5,
-			"SeatID": 5,
-			"IsCore": 1,
+			"Name": "Calliope",
+			"Full_Name": "Calliope",
+			"Class": "Bard",
+			"Race": "Half-Elf",
+			"Age": 65,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [400, 1690],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support",
+				"healing"
+			],
+			"Group": "Force Grey",
 			"STR": 12,
 			"DEX": 16,
 			"CON": 14,
 			"INT": 12,
 			"WIS": 12,
 			"CHA": 19,
-			"Tags": ["female", "half-elf", "bard", "support", "healing", "chaotic", "good", "forcegrey"],
-			"Type": "Core Champions"
+			"Bio": "Calliope was raised on a pirate ship, and yes, that's an excuse for her sometimes volatile behavior and colorful language. She'll sing you a song, but you better listen or she'll smash you with her lute. Calliope can't resist the lure of adventure or making new enemies, but it's her friends who serve as the family she never had.",
+			"Attack_CD": 3.7,
+			"Ult_CD": 180,
+			"Swaps": "---",
+			"SeatID": 5,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				400,
+				1690
+			],
+			"Tags": [
+				"female",
+				"half-elf",
+				"bard",
+				"support",
+				"healing",
+				"chaotic",
+				"good",
+				"forcegrey"
+			],
+			"BaseAttack":
+			{
+				"id": 9,
+				"name": "Vicious Mockery",
+				"description": "Calliope lets loose a string of insulting melodies, hitting the two closest enemies.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 2,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 3.7,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "song_of_pain",
+						"shoot_frame": 9,
+						"hit_sound": 133,
+						"shoot_sound": 159
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 10,
+				"name": "Impale",
+				"description": "Calliope lets loose a piercing crossbow bolt and shields all members of the party.",
+				"long_description": "Calliope points her lute at a random enemy and lets loose a hidden crossbow bolt. It tears through all enemies in a line. After attacking, she engages her damage shield on all members of your party.",
+				"graphic_id": 670,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03125,
+				"cooldown": 180,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "impale",
+						"shoot_frame": 29,
+						"hit_sound": 142,
+						"sound_frames":
+						{
+							"1": 163
+						},
+						"line_damage_distance": 100,
+						"effect_frames":
+						{
+							"-1":
+							{
+								"effect_string": "grant_all_instant_temporary_hp_with_bonus,100,72",
+								"activate_on_animation_cancelled": true
+							}
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"line",
+					"ultimate"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			}
 		},
 		{
-			"Name": "Dhadius",
 			"HeroID": 17,
-			"SeatID": 5,
-			"IsCore": 0,
+			"Name": "Dhadius",
+			"Full_Name": "Dhadius the Magnificent",
+			"Class": "Wizard",
+			"Race": "Human",
+			"Age": 57,
 			"Alignment1": "Choatic",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Choatic Neutral",
-			"Stats": "",
-			"FeatUnlock": [320, 1360],
+			"AlignmentAbbr": "CN",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "---",
 			"STR": 8,
 			"DEX": 12,
 			"CON": 10,
 			"INT": 18,
 			"WIS": 9,
 			"CHA": 11,
-			"Tags": ["male", "human", "wizard", "dps", "support", "chaotic", "neutral", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Xander",
-			"HeroID": 29,
+			"Bio": "Dhadius is a mage of legendary status and acclaim (at least, in his own mind), who sees everyone else as intellectual worms. Being an egomaniac, he seeks out esoteric lore and rare magical secrets so he may know things that the 'common fools' do not. Dhadius hails from Luskan in the north, where he is a member of the Arcane Brotherhood, an infamous group of wizards. He joined them only recently and hasn't been taken as seriously by the others as he thinks he should be. He's determined to let it be known far and wide that he is a wizard to be respected and feared.",
+			"Attack_CD": 3.5,
+			"Ult_CD": 250,
+			"Swaps": "---",
 			"SeatID": 5,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				320,
+				1360
+			],
+			"Tags": [
+				"male",
+				"human",
+				"wizard",
+				"dps",
+				"support",
+				"chaotic",
+				"neutral",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 60,
+				"name": "Chromatic Orb",
+				"description": "Dhadius tosses a Chromatic orb with a random element at the nearest enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 3.5,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "random_chromatic_orb"
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 61,
+				"name": "Magic Missile Barrage",
+				"description": "Dhadius summons a storm of Magic Missiles.",
+				"long_description": "Dhadius summons a storm of Magic Missiles - one for every enemy, plus a few extras for good measure.",
+				"graphic_id": 1649,
+				"target": "random",
+				"num_targets": 5,
+				"aoe_radius": 0,
+				"damage_modifier": 0.0125,
+				"cooldown": 250,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "magic_missile",
+						"shoot_frame": 21,
+						"projectile_delay": 0.05,
+						"projectile_count": 10,
+						"shoot_sound": 149,
+						"hit_sound": 133,
+						"additional_targets": [
+							{
+								"type": "per_monster",
+								"amount": 1
+							}
+						]
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 29,
+			"Name": "Xander",
+			"Full_Name": "Xander",
+			"Class": "Rogue",
+			"Race": "Human",
+			"Age": 19,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [235, 995],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support"
+			],
+			"Group": "CNE Original",
 			"STR": 8,
 			"DEX": 20,
 			"CON": 10,
 			"INT": 14,
 			"WIS": 15,
 			"CHA": 12,
-			"Tags": ["male", "human", "rogue", "support", "chaotic", "good", "event", "cneoriginal"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Qillek",
-			"HeroID": 44,
+			"Bio": "Fascinated by magic at a young age when he lived in an orphanage, but lacking any ability or proficiency, Xander is not terribly good at much of anything, though something about his adorable clumsiness and childlike wonder anytime magic is being used nearby has been known to inspire those around him. Until recently, he was living on the streets of Waterdeep, scraping together just enough to survive. Now, he is a faithful member of your party, always ready to leap into the fray, even if he doesn't really seem to be able to hit much of anything.",
+			"Attack_CD": 3.5,
+			"Ult_CD": 400,
+			"Swaps": "---",
 			"SeatID": 5,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				235,
+				995
+			],
+			"Tags": [
+				"male",
+				"human",
+				"rogue",
+				"support",
+				"chaotic",
+				"good",
+				"event",
+				"cneoriginal"
+			],
+			"BaseAttack":
+			{
+				"id": 123,
+				"name": "Acrobatic Backstab",
+				"description": "Xander backstabs a random opponent. Unfortunately, he doesn't always exactly hit them.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 3.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "backstab",
+						"target_offset_x": 180,
+						"miss_chance": 33
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 124,
+				"name": "Friends in High Places",
+				"description": "Xander summons a friendly neighborhood stone giant.",
+				"long_description": "Xander uses his miniature statue to summon one of Waterdeep's giant walking statues. A giant stone foot smashes all enemies from above, dealing massive damage.",
+				"graphic_id": 5969,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 400,
+				"animations": [
+					{
+						"type": "xander_ultimate"
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 44,
+			"Name": "Qillek",
+			"Full_Name": "Qillek Ad Khollar",
+			"Class": "Cleric / Bard",
+			"Race": "Aarakocra",
+			"Age": 3,
 			"Alignment1": "Lawful",
 			"Alignment2": "Good",
 			"AlignmentText": "Lawful Good",
-			"Stats": "",
-			"FeatUnlock": [470, 2050],
+			"AlignmentAbbr": "LG",
+			"Roles": [
+				"support",
+				"healing"
+			],
+			"Group": "Heroes of Aerois",
 			"STR": 12,
 			"DEX": 15,
 			"CON": 12,
 			"INT": 13,
 			"WIS": 18,
 			"CHA": 14,
-			"Tags": ["male", "aarakocra", "bard", "cleric", "healing", "support", "lawful", "good", "aerois", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Pwent",
-			"HeroID": 50,
+			"Bio": "Qillek is timid, meek and nervous, being a comparably young character in the party and thrown into a world he doesn't understand with no wing to fly him out of a bad situation. His charisma, wit, and superiority ripped away when flying through the Valley of the Storms, taking his left wing and arm away but introducing him to H'esper, who gave him dark visions to push him forward. Inside him is an envious amount of courage and a stable sense of logic when things get dire, which has led other party members to consider him their leader. He doesn't agree with the idea, but he's not ready to let his friends down.",
+			"Attack_CD": 4.75,
+			"Ult_CD": 340,
+			"Swaps": "---",
 			"SeatID": 5,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				470,
+				2050
+			],
+			"Tags": [
+				"male",
+				"aarakocra",
+				"bard",
+				"cleric",
+				"healing",
+				"support",
+				"lawful",
+				"good",
+				"aerois",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 207,
+				"name": "Feather Flurry",
+				"description": "Qillek attacks the frontmost monsters with a flurry of feathers.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 2,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.75,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "feather_flurry",
+						"limit_num_projectiles_by_targets": true,
+						"shoot_frame": 9
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 208,
+				"name": "Calm Emotions",
+				"description": "Qillek rains purple feathers from above, calming all attacking monsters.",
+				"long_description": "Qillek rains purple feathers from above, calming all attacking monsters and reducing their attack and enrage speeds to 1/3rd for the next 30 seconds.",
+				"graphic_id": 5619,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 340,
+				"animations": [
+					{
+						"type": "qillick_ultimate",
+						"effects_on_monsters": [
+							{
+								"effect_string": "monster_attack_speed_reduce,66",
+								"for_time": 30,
+								"active_graphic_id": 5600,
+								"active_graphic_y": -90
+							},
+							{
+								"effect_string": "monster_power_boost_timer_speed_reduce,66",
+								"for_time": 30
+							}
+						]
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 50,
+			"Name": "Pwent",
+			"Full_Name": "Thibbledorf Pwent",
+			"Class": "Barbarian",
+			"Race": "Dwarf",
+			"Age": 176,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [360, 1510],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support"
+			],
+			"Group": "---",
 			"STR": 18,
 			"DEX": 14,
 			"CON": 17,
 			"INT": 9,
 			"WIS": 12,
 			"CHA": 8,
-			"Tags": ["male", "dwarf", "barbarian", "support", "chaotic", "good", "event"],
-			"Type": "Event Champions"
+			"Bio": "Despite a reputation as a loud, gruff, and stinky dwarf who hates bathing, Thibbledorf Pwent is a loyal and beloved member of Clan Battlehammer. Known as 'Pwent' to his friends, he leads the Gutbusters of Mithral Hall, a dwarven battlerager squad focused on direct combat with little regard for their own safety. He wears armor completely covered in spikes to help rend the flesh of his enemies, and in the midst of battle Pwent often falls into a bloodrage, doing anything to protect his allies. While not an official member of the Companions of the Hall, Pwent will always aid his King when possible -- even beyond death...",
+			"Attack_CD": 5,
+			"Ult_CD": 300,
+			"Swaps": "---",
+			"SeatID": 5,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				360,
+				1510
+			],
+			"Tags": [
+				"male",
+				"dwarf",
+				"barbarian",
+				"support",
+				"chaotic",
+				"good",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 228,
+				"name": "Spiked Hug",
+				"description": "Pwent headbutts a random enemy, using his spiked armour to inflict a bleed effect.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"damage_frame": 8,
+						"target_offset_x": -80,
+						"damage_over_time":
+						{
+							"percent": 0.5,
+							"time": 10,
+							"tick_time": 1,
+							"damage_is_additional": true,
+							"pop_damage": true
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 229,
+				"name": "Round 'Em Up!",
+				"description": "Pwent dashes quickly around the area rounding up all available enemies, and then stuns, damages, and inflicts a bleed effect on them.",
+				"long_description": "Pwent dashes quickly around the area rounding up all available enemies, and then stuns, damages, and inflicts a bleed effect on them.",
+				"graphic_id": 6372,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 300,
+				"animations": [
+					{
+						"type": "roundup_ult",
+						"animation_sequence": 4,
+						"damage_over_time":
+						{
+							"percent": 0.5,
+							"time": 10,
+							"tick_time": 1,
+							"damage_is_additional": true,
+							"pop_damage": true
+						},
+						"stun_on_hit": 5
+					}
+				],
+				"tags": [
+					"melee",
+					"aoe",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Asharra",
 			"HeroID": 6,
-			"SeatID": 6,
-			"IsCore": 1,
+			"Name": "Asharra",
+			"Full_Name": "Asharra",
+			"Class": "Wizard",
+			"Race": "Aarakocra",
+			"Age": 38,
 			"Alignment1": "Lawful",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Lawful Neutral",
-			"Stats": "",
-			"FeatUnlock": [175, 780],
+			"AlignmentAbbr": "LN",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "---",
 			"STR": 10,
 			"DEX": 11,
 			"CON": 9,
 			"INT": 17,
 			"WIS": 15,
 			"CHA": 14,
-			"Tags": ["female", "aarakocra", "wizard", "dps", "support", "lawful", "neutral"],
-			"Type": "Core Champions"
+			"Bio": "The elder of Kir Sabal, Asharra is a stern and honorable aarakocra wizard who looks over her flock and the safety of the Omu royal family.",
+			"Attack_CD": 7,
+			"Ult_CD": 420,
+			"Swaps": "---",
+			"SeatID": 6,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				175,
+				780
+			],
+			"Tags": [
+				"female",
+				"aarakocra",
+				"wizard",
+				"dps",
+				"support",
+				"lawful",
+				"neutral"
+			],
+			"BaseAttack":
+			{
+				"id": 11,
+				"name": "Magic Missile",
+				"description": "Asharra lets loose a barrage of missiles, hitting random targets.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 3,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 7,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "magic_missile",
+						"shoot_frame": 18,
+						"projectile_delay": 0.1,
+						"projectile_count": 3,
+						"shoot_sound": 149,
+						"hit_sound": 133
+					}
+				],
+				"tags": [
+					"ranged",
+					"multitarget"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 12,
+				"name": "Fireball",
+				"description": "Asharra pushes back all enemies and casts a massive Fireball on a random one.",
+				"long_description": "Asharra leaps into the air, flapping her wings and pushing all enemies away from the party. Hovering there, she summons a massive fireball that hits a random enemy and all other enemies within a small radius.",
+				"graphic_id": 668,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 200,
+				"damage_modifier": 0.00595,
+				"cooldown": 420,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "fireball",
+						"shoot_frame": 75,
+						"sound_frames":
+						{
+							"1": 153
+						},
+						"hit_sound": 142,
+						"effect_frames":
+						{
+							"34":
+							{
+								"effect_string": "enemies_pushback,11,200"
+							},
+							"44":
+							{
+								"effect_string": "enemies_pushback,11,200"
+							},
+							"54":
+							{
+								"effect_string": "enemies_pushback,11,200"
+							}
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"aoe",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		},
 		{
-			"Name": "Krond",
 			"HeroID": 15,
-			"SeatID": 6,
-			"IsCore": 0,
+			"Name": "Krond",
+			"Full_Name": "Krond",
+			"Class": "Fighter",
+			"Race": "Half-Orc",
+			"Age": 42,
 			"Alignment1": "Choatic",
 			"Alignment2": "Evil",
 			"AlignmentText": "Choatic Evil",
-			"Stats": "",
-			"FeatUnlock": [305, 1400],
+			"AlignmentAbbr": "CE",
+			"Roles": [
+				"dps"
+			],
+			"Group": "CNE Original",
 			"STR": 18,
 			"DEX": 12,
 			"CON": 14,
 			"INT": 16,
 			"WIS": 13,
 			"CHA": 9,
-			"Tags": ["male", "half-orc", "fighter", "dps", "chaotic", "evil", "event", "cneoriginal"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Evelyn",
-			"HeroID": 26,
+			"Bio": "Born to an academic female human wizard who was researching an orc tribe and the vicious leader of said tribe, Krond has experience in both worlds. Raised as a fearsome warrior, he began focusing on the arcane arts after his mother was killed in a goblin raid. He carries a bonded warhammer named Unity. After a year of being looked down on during his travels, Krond has embraced his Orcish side and is now Chaotic Evil.",
+			"Attack_CD": 5.25,
+			"Ult_CD": 210,
+			"Swaps": "---",
 			"SeatID": 6,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				305,
+				1400
+			],
+			"Tags": [
+				"male",
+				"half-orc",
+				"fighter",
+				"dps",
+				"chaotic",
+				"evil",
+				"event",
+				"cneoriginal"
+			],
+			"BaseAttack":
+			{
+				"id": 46,
+				"name": "Orcish Smash",
+				"description": "Krond leaps out and attacks the front-most target with his bonded warhammer.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 5.25,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"damage_frame": 2,
+						"target_offset_x": -80,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"2": 154
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 50,
+				"name": "Arcane Charge",
+				"description": "Krond teleports to a random enemy and causes massive aoe damage.",
+				"long_description": "Krond throws down his warhammer and leaps up into the air, teleporting to a random enemy and causing massive aoe damage by slamming down to the ground and casting Shatter when he appears.",
+				"graphic_id": 1356,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 200,
+				"damage_modifier": 0.03333,
+				"cooldown": 210,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"shake_on_hit": 0.1,
+						"power_up_sequence":
+						{
+							"start_frame": 0,
+							"end_frame": 15,
+							"sound_frames":
+							{
+								"2": 149
+							}
+						},
+						"sequences": [
+							{
+								"start_frame": 18,
+								"damage_frame": 22,
+								"end_frame": 44,
+								"sound_frames":
+								{
+									"20": 133
+								},
+								"visual_effect_frames":
+								{
+									"hit":
+									{
+										"effect": "animated_clip",
+										"graphic_id": 1321,
+										"sort_offset": -9999,
+										"offset_x": 70
+									}
+								}
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 26,
+			"Name": "Evelyn",
+			"Full_Name": "Evelyn Marthain",
+			"Class": "Paladin",
+			"Race": "Human",
+			"Age": 22,
 			"Alignment1": "Neutral",
 			"Alignment2": "Good",
 			"AlignmentText": "Neutral Good",
-			"Stats": "",
-			"FeatUnlock": [380, 1760],
+			"AlignmentAbbr": "NG",
+			"Roles": [
+				"support",
+				"tanking"
+			],
+			"Group": "Waffle Crew",
 			"STR": 19,
 			"DEX": 14,
 			"CON": 16,
 			"INT": 11,
 			"WIS": 12,
 			"CHA": 18,
-			"Tags": ["female", "human", "paladin", "tanking", "support", "neutral", "good", "wafflecrew", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Shandie",
-			"HeroID": 47,
+			"Bio": "Caring, motherly, and endlessly optimistic, Evelyn has adventured across the realms as part of the Waffle Crew for many years. She's always first in battle, thanks to her flying boots, and will always take a hit to protect others. Short, yet tough, her devotion to Lathander has seen her through many perilous situations.",
+			"Attack_CD": 7,
+			"Ult_CD": 380,
+			"Swaps": "---",
 			"SeatID": 6,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				380,
+				1760
+			],
+			"Tags": [
+				"female",
+				"human",
+				"paladin",
+				"tanking",
+				"support",
+				"neutral",
+				"good",
+				"wafflecrew",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 102,
+				"name": "Mighty Axe",
+				"description": "Evelyn smashes the front-most enemy with her enormous battleaxe. Every third attack, she cleaves all nearby enemies as well.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 7,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"damage_frame": 4
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 103,
+				"name": "Find Steed",
+				"description": "Evelyn summons her Celestial Pegasus and dashes across the battlefield.",
+				"long_description": "Evelyn summons her Celestial Pegasus and dashes across the battlefield, damaging all enemies in a line for massive damage and briefly stunning all damaged enemies.",
+				"graphic_id": 3043,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 380,
+				"animations": [
+					{
+						"type": "evelyn_ultimate",
+						"stun_on_hit": 3,
+						"stun_graphic": 1509,
+						"power_up_sequence":
+						{
+							"start_frame": 0,
+							"end_frame": 61
+						},
+						"sequences": [
+							{
+								"start_frame": 62,
+								"end_frame": 94
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 47,
+			"Name": "Shandie",
+			"Full_Name": "Shandie",
+			"Class": "Rogue",
+			"Race": "Halfling",
+			"Age": 63,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [265, 1220],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support"
+			],
+			"Group": "Heroes of Baldur's Gate",
 			"STR": 10,
 			"DEX": 18,
 			"CON": 15,
 			"INT": 13,
 			"WIS": 12,
 			"CHA": 14,
-			"Tags": ["female", "halfling", "rogue", "support", "chaotic", "good", "baldursgate", "event"],
-			"Type": "Event Champions"
+			"Bio": "Shandie grew up on the rough streets of the Lower City of Baldur's Gate. She quickly learned that if she wanted to survive, she needed to be fast on her feet and even faster with her wit and weaponry. The first time Shandie saw a bowmaster gracefully launch an arrow into a bull's-eye, she knew she had to master archery. With years of practice under her belt, any opponents underestimating this stealthy halfling will soon realize how dangerous she is as a volley of arrows bear down on them unexpectedly from shadowy corners.",
+			"Attack_CD": 5,
+			"Ult_CD": 260,
+			"Swaps": "---",
+			"SeatID": 6,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				265,
+				1220
+			],
+			"Tags": [
+				"female",
+				"halfling",
+				"rogue",
+				"support",
+				"chaotic",
+				"good",
+				"baldursgate",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 219,
+				"name": "Shortbow Expert",
+				"description": "Shandie fires an arrow at a random enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 5,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "arrow",
+						"shoot_frame": 23,
+						"projectile_graphic_id": 5946,
+						"shoot_offset_x": 40,
+						"shoot_offset_y": -10
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 221,
+				"name": "Survivalist",
+				"description": "Shandie throws smoke grenades and caltrops onto the battlefield, causing enemies to bleed and miss 50% of their attacks for 10 seconds.",
+				"long_description": "Shandie bends the odds in the party's favor, throwing smoke grenades and caltrops onto the battlefield, causing enemies to take the ultimate's full damage over 10 seconds and having a 50% chance to miss their attacks during that time.",
+				"graphic_id": 5998,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 260,
+				"animations": [
+					{
+						"type": "shandie_ult",
+						"shoot_frame": 20,
+						"projectile_ids": [
+							5947,
+							5948
+						],
+						"animation_sequence": 5,
+						"monster_miss_chance": 50,
+						"duration": 10,
+						"damage_over_time":
+						{
+							"percent": 1,
+							"time": 10,
+							"tick_time": 1,
+							"pop_damage": true
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"aoe",
+					"ultimate"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			}
 		},
 		{
-			"Name": "Minsc",
 			"HeroID": 7,
-			"SeatID": 7,
-			"IsCore": 1,
+			"Name": "Minsc",
+			"Full_Name": "Minsc",
+			"Class": "Ranger",
+			"Race": "Human",
+			"Age": 45,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [225, 1110],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "Heroes of Baldur's Gate",
 			"STR": 18,
 			"DEX": 15,
 			"CON": 13,
 			"INT": 8,
 			"WIS": 10,
 			"CHA": 12,
-			"Tags": ["male", "human", "space-hamster", "ranger", "dps", "support", "chaotic", "good", "baldursgate"],
-			"Type": "Core Champions"
+			"Bio": "Minsc is a dim-witted but ferociously courageous ranger who saved Baldur's Gate and the surrounding area several times over the course of his adventures. He's accompanied by his stalwart companion Boo; a miniature giant space hamster.",
+			"Attack_CD": 4.5,
+			"Ult_CD": 180,
+			"Swaps": "---",
+			"SeatID": 7,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				225,
+				1110
+			],
+			"Tags": [
+				"male",
+				"human",
+				"space-hamster",
+				"ranger",
+				"dps",
+				"support",
+				"chaotic",
+				"good",
+				"baldursgate"
+			],
+			"BaseAttack":
+			{
+				"id": 13,
+				"name": "Cleave",
+				"description": "Minsc cleaves all targets near the closest enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 150,
+				"damage_modifier": 1,
+				"cooldown": 4.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -34,
+						"damage_frame": 2,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"2": 189
+						}
+					}
+				],
+				"tags": [
+					"melee",
+					"aoe"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 14,
+				"name": "Go for the Eyes!",
+				"description": "Minsc and Boo attack together, dealing massive cleaving damage.",
+				"long_description": "Minsc swings his greatsword in a massive circle centered on the front-most enemy while Boo leaps about causing up to 5 random enemies to take additional damage for the next 30 seconds.",
+				"graphic_id": 676,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 200,
+				"damage_modifier": 0.01875,
+				"cooldown": 180,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"jump_sound": 30,
+						"power_up_sequence":
+						{
+							"start_frame": 0,
+							"end_frame": 57,
+							"repeat": true,
+							"sound_frames":
+							{
+								"1": 193
+							},
+							"effect_frames":
+							{
+								"1":
+								{
+									"effect_string": "boo_ultimate_rebalanced,5,0.3,30"
+								}
+							}
+						},
+						"sequences": [
+							{
+								"sound_frames":
+								{
+									"60": 214,
+									"70": 215,
+									"80": 216,
+									"90": 217
+								},
+								"hit_frames": [
+									60,
+									72
+								],
+								"start_frame": 58,
+								"damage_frame": 93,
+								"end_frame": 103,
+								"target_offset_x": -50
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee",
+					"aoe",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Catti-brie",
 			"HeroID": 25,
-			"SeatID": 7,
-			"IsCore": 0,
+			"Name": "Catti-brie",
+			"Full_Name": "Catti-brie",
+			"Class": "Fighter",
+			"Race": "Human",
+			"Age": 33,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [410, 2125],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "Companions of the Hall",
 			"STR": 15,
 			"DEX": 18,
 			"CON": 14,
 			"INT": 17,
 			"WIS": 11,
 			"CHA": 13,
-			"Tags": ["female", "human", "fighter", "dps", "support", "chaotic", "good", "companion", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Farideh",
-			"HeroID": 33,
+			"Bio": "Catti-brie is a kind, tolerant, and pragmatic warrior. She has spent much of her life adventuring with the legendary Companions of the Hall, accompanying Drizzt Do'Urden, Bruenor Battlehammer, Regis, and Wulfgar on numerous escapades. As the moral compass of the group, Catti-brie helps guide her companions to wise actions through common sense and clear insight. She wields the legendary bow Taulmaril, which shoots silver arrows.",
+			"Attack_CD": 5.3,
+			"Ult_CD": 340,
+			"Swaps": "---",
 			"SeatID": 7,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				410,
+				2125
+			],
+			"Tags": [
+				"female",
+				"human",
+				"fighter",
+				"dps",
+				"support",
+				"chaotic",
+				"good",
+				"companion",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 99,
+				"name": "Long Shot",
+				"description": "Catti-brie shoots the farthest enemy with her bow",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "back",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 5.3,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "catti_brie_arrow",
+						"shoot_frame": 9,
+						"shoot_offset_y": -45,
+						"shoot_offset_x": 30
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 100,
+				"name": "Empty the Quiver",
+				"description": "Catti-Brie shoots six arrows at once from her bow, making each enemy hit more vulnerable for 30 seconds.",
+				"long_description": "Catti-Brie shoots six arrows at once from her bow. Each enemy hit by her arrows can be crit by all Champions using Catti-brie's crit chance and damage bonus for 30 seconds.",
+				"graphic_id": 2845,
+				"target": "random",
+				"num_targets": 6,
+				"aoe_radius": 0,
+				"damage_modifier": 0.04,
+				"cooldown": 340,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "catti_brie_arrow",
+						"shoot_frame": 26,
+						"projectile_delay": 0.03,
+						"projectile_count": 6,
+						"effects_on_monsters": [
+							{
+								"effect_string": "add_monster_crit_chance_from_source,30,2875"
+							}
+						],
+						"shoot_offset_y": -45,
+						"shoot_offset_x": 30
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			}
+		},
+		{
+			"HeroID": 33,
+			"Name": "Farideh",
+			"Full_Name": "Farideh",
+			"Class": "Warlock",
+			"Race": "Tiefling",
+			"Age": 19,
 			"Alignment1": "Neutral",
 			"Alignment2": "Good",
 			"AlignmentText": "Neutral Good",
-			"Stats": "",
-			"FeatUnlock": [285, 1450],
+			"AlignmentAbbr": "NG",
+			"Roles": [
+				"dps"
+			],
+			"Group": "---",
 			"STR": 10,
 			"DEX": 14,
 			"CON": 14,
 			"INT": 14,
 			"WIS": 13,
 			"CHA": 18,
-			"Tags": ["female", "tiefling", "warlock", "neutral", "good", "dps", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Black Viper",
-			"HeroID": 40,
+			"Bio": "Abandoned as an infant and adopted by an outcast dragonborn warrior, Farideh grew to adulthood acutely aware of the drawbacks of being a tiefling. While those from the Nine Hells do their utmost to corrupt her, Farideh isn't interested in power so much as defending the world from demons, the undead, and any other villains trying to bring trouble or drag her friends and family into danger.",
+			"Attack_CD": 5,
+			"Ult_CD": 450,
+			"Swaps": "---",
 			"SeatID": 7,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				285,
+				1450
+			],
+			"Tags": [
+				"female",
+				"tiefling",
+				"warlock",
+				"neutral",
+				"good",
+				"dps",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 137,
+				"name": "Scorching Ray",
+				"description": "Farideh creates $attack_num_targets rays of fire and hurls them at random enemies.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 3,
+				"aoe_radius": 0,
+				"damage_modifier": 0.33,
+				"cooldown": 5,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "scorching_ray",
+						"shoot_frame": 9,
+						"projectile_delay_no_pause": 0.1,
+						"projectile_count": 3,
+						"shoot_offset_x": 27,
+						"shoot_offset_y": -20
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 138,
+				"name": "Infernal Aspect",
+				"description": "Farideh taps into her infernal bloodline, pushing away, slowing, and damaging nearby enemies.",
+				"long_description": "Farideh taps into her infernal bloodline, pushing away and slowing all enemies, then damaging a random enemy every second, for 15 seconds.",
+				"graphic_id": 4109,
+				"target": "none",
+				"num_targets": 0,
+				"aoe_radius": 0,
+				"damage_modifier": 0.014,
+				"cooldown": 450,
+				"animations": [
+					{
+						"type": "farideh_ultimate",
+						"tooltip_damage_override": "farideh_ult",
+						"farideh_effect":
+						{
+							"effect_string": "farideh_ultimate,100",
+							"for_time": 15
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 40,
+			"Name": "Black Viper",
+			"Full_Name": "The Black Viper",
+			"Class": "Rogue",
+			"Race": "Human",
+			"Age": 32,
 			"Alignment1": "Choatic",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Choatic Neutral",
-			"Stats": "",
-			"FeatUnlock": [325, 1710],
+			"AlignmentAbbr": "CN",
+			"Roles": [
+				"dps"
+			],
+			"Group": "---",
 			"STR": 11,
 			"DEX": 18,
 			"CON": 14,
 			"INT": 11,
 			"WIS": 11,
 			"CHA": 16,
-			"Tags": ["female", "human", "rogue", "dps", "neutral", "chaotic", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Jim",
-			"HeroID": 48,
+			"Bio": "The Black Viper was a notorious burglar, pickpocket, mugger, and assassin who died a century ago, after a long and nefarious career. Esvele Rosznar, a brash young noble, has recently adopted the Black Viper's persona to lead a secret life of crime. Like many other nobles, Esvele gossips about the Black Viper's exploits to lend credence to the villain's mystique.",
+			"Attack_CD": 6,
+			"Ult_CD": 300,
+			"Swaps": "---",
 			"SeatID": 7,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				325,
+				1710
+			],
+			"Tags": [
+				"female",
+				"human",
+				"rogue",
+				"dps",
+				"neutral",
+				"chaotic",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 181,
+				"name": "En Garde",
+				"description": "Black Viper attacks a random enemy with her daggers.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6,
+				"animations": [
+					{
+						"type": "black_viper_base",
+						"sequences": [
+							{
+								"animation_sequence_name": "attack",
+								"scale_x": 1,
+								"target_offset_x": -50,
+								"damage_frame": 8
+							},
+							{
+								"animation_sequence_name": "attack_b",
+								"scale_x": -1,
+								"target_offset_x": 150,
+								"damage_frame": 6,
+								"effects_on_monsters": [
+									{
+										"effect_string": "effect_def,287"
+									}
+								]
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 182,
+				"name": "Smokescreen",
+				"description": "Black Viper throws down a massive smokescreen, hindering enemies and helping herself.",
+				"long_description": "Black Viper creates a smokescreen, reducing damage done to the formation and causing all of her attacks to be Sneak Attacks.",
+				"graphic_id": 5081,
+				"target": "none",
+				"num_targets": 0,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 300,
+				"animations": [
+					{
+						"type": "black_viper_ultimate",
+						"attack_seq": "ultimate",
+						"no_damage_display": true,
+						"effect_frames":
+						{
+							"projectile":
+							{
+								"effect_string": "reduce_monster_damage,50",
+								"for_time": 20,
+								"activate_on_animation_cancelled": true
+							}
+						},
+						"visual_effect_frames":
+						{
+							"projectile":
+							{
+								"effect": "formation_heal_glow"
+							}
+						}
+					}
+				],
+				"tags": [
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 48,
+			"Name": "Jim",
+			"Full_Name": "James (Jim) Winifred Darkmagic III",
+			"Class": "Wizard",
+			"Race": "Human",
+			"Age": 41,
 			"Alignment1": "Choatic",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Choatic Neutral",
-			"Stats": "",
-			"FeatUnlock": [180, 895],
+			"AlignmentAbbr": "CN",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "Acquistion Inc.",
 			"STR": 8,
 			"DEX": 14,
 			"CON": 10,
 			"INT": 18,
 			"WIS": 12,
 			"CHA": 14,
-			"Tags": ["male", "human", "wizard", "dps", "support", "chaotic", "neutral", "acqinc", "event"],
-			"Type": "Event Champions"
+			"Bio": "James Winifred Darkmagic III is the scion of a mysterious, multiplanar wizarding family. As an entertainer and purveyor of the 'Jim Darkmagic Experience,' the legendary mage can often be found in markets and town squares performing feats of mundane legerdemain. The renown he has earned for these feats is nearly equaled by the reputation that follows him as a Chief Arcanist (and occasional arsonist) for Acquisitions Incorporated.",
+			"Attack_CD": 4.75,
+			"Ult_CD": 180,
+			"Swaps": "---",
+			"SeatID": 7,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				180,
+				895
+			],
+			"Tags": [
+				"male",
+				"human",
+				"wizard",
+				"dps",
+				"support",
+				"chaotic",
+				"neutral",
+				"acqinc",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 222,
+				"name": "Jim's Magic Missile",
+				"description": "Jim attacks random enemies with his own brand of magic missiles.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 2,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.75,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "magic_missile",
+						"shoot_frame": 3,
+						"projectile_delay_no_pause": 0.2,
+						"projectile_count": 2,
+						"shoot_sound": 149,
+						"hit_sound": 133,
+						"shoot_offset_x": 50,
+						"shoot_offset_y": -80,
+						"hold_shoot_frame": false
+					}
+				],
+				"tags": [
+					"ranged",
+					"multitarget"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 223,
+				"name": "Jim's Magical Maelstrom",
+				"description": "Jim attacks all enemies with a showy shower of sparks.",
+				"long_description": "Jim attacks all enemies with a showy shower of sparks. You can't miss it!",
+				"graphic_id": 6117,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 180,
+				"animations": [
+					{
+						"type": "jim_ult",
+						"shoot_frame": 18,
+						"shoot_sound": 149,
+						"hit_sound": 133,
+						"projectile_id": 6093,
+						"firework_id": 6092,
+						"animation_sequence": 4,
+						"jimtext_id": 6091
+					}
+				],
+				"tags": [
+					"ranged",
+					"aoe",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		},
 		{
-			"Name": "Delina",
 			"HeroID": 8,
-			"SeatID": 8,
-			"IsCore": 1,
+			"Name": "Delina",
+			"Full_Name": "Delina",
+			"Class": "Sorcerer",
+			"Race": "Elf",
+			"Age": 245,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [730, 4140],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"dps"
+			],
+			"Group": "Heroes of Baldur's Gate",
 			"STR": 8,
 			"DEX": 10,
 			"CON": 14,
 			"INT": 15,
 			"WIS": 13,
 			"CHA": 17,
-			"Tags": ["female", "elf", "sorcerer", "dps", "chaotic", "good", "baldursgate"],
-			"Type": "Core Champions"
-		},
-		{
-			"Name": "Hitch",
-			"HeroID": 13,
+			"Bio": "Delina is a young sorceress (by elven standards) with an inquisitive mind and fearless personality. Her pale skin and hair may give off the initial impression of vulnerability, but she carries great strength within.",
+			"Attack_CD": 6,
+			"Ult_CD": 240,
+			"Swaps": "---",
 			"SeatID": 8,
 			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				730,
+				4140
+			],
+			"Tags": [
+				"female",
+				"elf",
+				"sorcerer",
+				"dps",
+				"chaotic",
+				"good",
+				"baldursgate"
+			],
+			"BaseAttack":
+			{
+				"id": 190,
+				"name": "Wild Magic - Fire Bolt",
+				"description": "A small blast of fire hits a single random enemy",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "firebolt",
+						"shoot_frame": 18,
+						"sound_frames":
+						{
+							"4": 84
+						},
+						"hit_sound": 69,
+						"update_base_attack_after": 191,
+						"shoot_offset_y": -10
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 16,
+				"name": "Controlled Chaos",
+				"description": "Delina's eyes begin to glow as she loses herself in her magic.",
+				"long_description": "Delina's eyes begin to glow as she loses herself in her magic, attacking faster and faster for more and more damage.",
+				"graphic_id": 672,
+				"target": "random",
+				"num_targets": 3,
+				"aoe_radius": 0,
+				"damage_modifier": 0.01667,
+				"cooldown": 240,
+				"animations": [
+					{
+						"type": "delina_ultimate",
+						"delina_effect":
+						{
+							"effect_string": "delina_ultimate_effect",
+							"for_time": 15
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"multitarget",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 13,
+			"Name": "Hitch",
+			"Full_Name": "Hitch",
+			"Class": "Rogue",
+			"Race": "Human",
+			"Age": 29,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [335, 1820],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "Force Grey",
 			"STR": 11,
 			"DEX": 18,
 			"CON": 12,
 			"INT": 13,
 			"WIS": 15,
 			"CHA": 17,
-			"Tags": ["male", "human", "rogue", "dps", "support", "chaotic", "good", "forcegrey"],
-			"Type": "Core Champions"
+			"Bio": "Hitch started off life on the wrong foot and the wrong side of the wagon tracks. Besides the Sword Coast, the only other place he's ever called home is Durpar in Southeast Faerûn, which has been conquered by goblinoids allied with Durpar's ruling merchant house. Now, he tries to keep two steps ahead of his shady past, avoiding run-ins with the Zhentarim and other nefarious acquaintances. With his quick wit and roguish charm, Hitch plans to somehow land on his feet, on a pile of gold, with a treasure map in each hand, but until then he needs all the friends he can get.",
+			"Attack_CD": 4.9,
+			"Ult_CD": 195,
+			"Swaps": "---",
+			"SeatID": 8,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				335,
+				1820
+			],
+			"Tags": [
+				"male",
+				"human",
+				"rogue",
+				"dps",
+				"support",
+				"chaotic",
+				"good",
+				"forcegrey"
+			],
+			"BaseAttack":
+			{
+				"id": 40,
+				"name": "Facestab",
+				"description": "Hitch stabs the nearest target in the face. Ouch!",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.9,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -14,
+						"damage_frame": 6,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"3": 179
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 41,
+				"name": "Shadow Attack",
+				"description": "Hitch disappears into the shadows and brutally backstabs the five furthest enemies.",
+				"long_description": "Hitch disappears into the shadows and reappears behind the furthest enemy, whom he stabs. He then repeats this for the next four furthest enemies, if applicable.",
+				"graphic_id": 1035,
+				"target": "back",
+				"num_targets": 5,
+				"aoe_radius": 0,
+				"damage_modifier": 0.02051,
+				"cooldown": 195,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"shake_on_hit": 0.1,
+						"sequences": [
+							{
+								"start_frame": 0,
+								"damage_frame": 6,
+								"end_frame": 28,
+								"sound_frames":
+								{
+									"2": 174,
+									"3": 179
+								},
+								"scale_x": -1,
+								"target_offset_x": 140
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Nrakk",
 			"HeroID": 24,
-			"SeatID": 8,
-			"IsCore": 0,
+			"Name": "Nrakk",
+			"Full_Name": "Nrakk",
+			"Class": "Monk",
+			"Race": "Githzerai",
+			"Age": 41,
 			"Alignment1": "Lawful",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Lawful Neutral",
-			"Stats": "",
-			"FeatUnlock": [225, 1190],
+			"AlignmentAbbr": "LN",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "CNE Original",
 			"STR": 13,
 			"DEX": 17,
 			"CON": 15,
 			"INT": 12,
 			"WIS": 19,
 			"CHA": 11,
-			"Tags": ["male", "gith", "githzerai", "monk", "dps", "support", "lawful", "neutral", "event", "cneoriginal"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Vlahnya",
-			"HeroID": 35,
+			"Bio": "Having watched your party's progress for many years from Limbo, the Great Githzera, Zaerith Menyar-Ag-Gith, has dispatched Nrakk to join your party on the Material Plane. Though his true motivations are unknown, Nrakk is a masterful Kensai monk whose kensei weapon Naginata is a force to be reckoned with on the battlefield. Reserved and aloof, Nrakk sometimes has a hard time interacting with those he sees as his lessers, but he nevertheless seems committed to the party's cause.",
+			"Attack_CD": 5.5,
+			"Ult_CD": 260,
+			"Swaps": "---",
 			"SeatID": 8,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				225,
+				1190
+			],
+			"Tags": [
+				"male",
+				"gith",
+				"githzerai",
+				"monk",
+				"dps",
+				"support",
+				"lawful",
+				"neutral",
+				"event",
+				"cneoriginal"
+			],
+			"BaseAttack":
+			{
+				"id": 97,
+				"name": "Naginata",
+				"description": "Nrakk attacks the nearest enemy with his Kensei Weapon.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 5.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target"
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 98,
+				"name": "Sharpen the Blade",
+				"description": "Nrakk channels Ki into his Naginata, increasing the damage dealt by all of his attacks.",
+				"long_description": "Nrakk channels Ki into his Naginata, increasing the damage dealt by all of his attacks by $(nrakk_ult_buffed 200)% for the next 30 seconds.",
+				"graphic_id": 2690,
+				"target": "none",
+				"num_targets": 0,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 260,
+				"animations": [
+					{
+						"type": "nrakk_ultimate",
+						"nrakk_effect": "effect_def,127",
+						"no_damage_display": true
+					}
+				],
+				"tags": [
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 35,
+			"Name": "Vlahnya",
+			"Full_Name": "Vlahnya Um'vairar",
+			"Class": "Bard / Wizard",
+			"Race": "Eladrin",
+			"Age": 530,
 			"Alignment1": "Neutral",
 			"Alignment2": "Good",
 			"AlignmentText": "Neutral Good",
-			"Stats": "",
-			"FeatUnlock": [230, 1290],
+			"AlignmentAbbr": "NG",
+			"Roles": [
+				"support"
+			],
+			"Group": "---",
 			"STR": 8,
 			"DEX": 14,
 			"CON": 10,
 			"INT": 14,
 			"WIS": 14,
 			"CHA": 16,
-			"Tags": ["female", "elf", "eladrin", "bard", "wizard", "support", "neutral", "good", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Walnut",
-			"HeroID": 46,
+			"Bio": "Fate Weaver, Spy mistress, New Olamn college of whispers instructor, Band Manager of Sirens of the Realms & Magic Missile, long time pal of Durnan. This noble looking Eladrin Elf has friends in high and low places. Her true origins are unknown though it is rumored she traveled across Faerûn with a bard troupe and learned about the world one tavern at a time.",
+			"Attack_CD": 4.5,
+			"Ult_CD": 600,
+			"Swaps": "---",
 			"SeatID": 8,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				230,
+				1290
+			],
+			"Tags": [
+				"female",
+				"elf",
+				"eladrin",
+				"bard",
+				"wizard",
+				"support",
+				"neutral",
+				"good",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 141,
+				"name": "Mage Hand",
+				"description": "Vlahnya damages a random enemy with her Mage Hand.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.5,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"shoot_frame": 10,
+						"projectile": "witch_slap"
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 142,
+				"name": "Plane Shift",
+				"description": "Vlahnya leaps into the fray and instantly teleports up to 10 non-boss enemies away.",
+				"long_description": "Vlahnya leaps into the fray and instantly teleports up to 10 non-boss enemies away, permanently removing them from combat.",
+				"graphic_id": 4373,
+				"target": "none",
+				"num_targets": 0,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 600,
+				"animations": [
+					{
+						"type": "vlahnya_ultimate",
+						"max_monsters": 10,
+						"no_damage_display": true
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 46,
+			"Name": "Walnut",
+			"Full_Name": "Walnut Dankgrass",
+			"Class": "Druid",
+			"Race": "Wood Elf",
+			"Age": 62,
 			"Alignment1": "Lawful",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Lawful Neutral",
-			"Stats": "",
-			"FeatUnlock": [290, 1600],
+			"AlignmentAbbr": "LN",
+			"Roles": [
+				"support",
+				"tanking"
+			],
+			"Group": "The C-Team",
 			"STR": 8,
 			"DEX": 16,
 			"CON": 14,
 			"INT": 10,
 			"WIS": 20,
 			"CHA": 10,
-			"Tags": ["female", "elf", "druid", "tanking", "support", "lawful", "neutral", "cteam", "event"],
-			"Type": "Event Champions"
+			"Bio": "Walnut is a child of the Enclave Panax Anima, an all-female clan of woodland defenders within the Kryptgarden Forest. Not only a frighteningly enthusiastic member of Acquisitions Incorporated, she also strives to protect the natural world by any means necessary. Did we mention she also has the goddess Mielikki living inside her? That seems important.",
+			"Attack_CD": 6.5,
+			"Ult_CD": 270,
+			"Swaps": "---",
+			"SeatID": 8,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				290,
+				1600
+			],
+			"Tags": [
+				"female",
+				"elf",
+				"druid",
+				"tanking",
+				"support",
+				"lawful",
+				"neutral",
+				"cteam",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 214,
+				"name": "Wicked Scimitar",
+				"description": "Walnut savagely attacks the nearest enemy with her scimitar.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"damage_frame": 2
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 216,
+				"name": "Forest Friends",
+				"description": "Walnut summons a swarm of lovable forest friends to attack all enemies.",
+				"long_description": "Walnut summons a swarm of lovable forest friends to attack all enemies. Each enemy killed heals the party by 10% of their max health. If no enemies are killed, the formation gains a temporary hit point shield equal to 100% of their max health.",
+				"graphic_id": 5828,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 270,
+				"animations": [
+					{
+						"type": "walnut_ult",
+						"damage_frame": 30,
+						"forest_friend_ids": [
+							5788,
+							5789,
+							5790,
+							5791,
+							5792,
+							5793
+						],
+						"forest_friends_combined_id": 6424,
+						"min_time": 3,
+						"max_time": 6
+					}
+				],
+				"tags": [
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Makos",
 			"HeroID": 9,
-			"SeatID": 9,
-			"IsCore": 1,
+			"Name": "Makos",
+			"Full_Name": "Makos",
+			"Class": "Warlock",
+			"Race": "Tiefling",
+			"Age": 56,
 			"Alignment1": "Neutral",
 			"Alignment2": "Evil",
 			"AlignmentText": "Neutral Evil",
-			"Stats": "",
-			"FeatUnlock": [60, 330],
+			"AlignmentAbbr": "NE",
+			"Roles": [
+				"support",
+				"dps",
+				"gold"
+			],
+			"Group": "---",
 			"STR": 11,
 			"DEX": 10,
 			"CON": 14,
 			"INT": 14,
 			"WIS": 8,
 			"CHA": 18,
-			"Tags": ["male", "tiefling", "warlock", "dps", "support", "gold", "neutral", "evil"],
-			"Type": "Core Champions"
-		},
-		{
-			"Name": "Drizzt",
-			"HeroID": 18,
+			"Bio": "Makos grew up on the streets with a desire to rise above it all. He knows that his innate connection to infernal power is his key to achieving his goals, no matter the cost.",
+			"Attack_CD": 5.7,
+			"Ult_CD": 300,
+			"Swaps": "---",
 			"SeatID": 9,
 			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				60,
+				330
+			],
+			"Tags": [
+				"male",
+				"tiefling",
+				"warlock",
+				"dps",
+				"support",
+				"gold",
+				"neutral",
+				"evil"
+			],
+			"BaseAttack":
+			{
+				"id": 17,
+				"name": "Eldritch Blast",
+				"description": "A beam of green crackling energy streaks towards a random enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 5.7,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "eldritch_blast",
+						"shoot_frame": 20,
+						"shoot_offset_x": 40,
+						"sound_frames":
+						{
+							"1": 184
+						},
+						"hit_sound": -1,
+						"buffer_hit_damage": true
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 18,
+				"name": "Circle of Death",
+				"description": "A sphere of negative energy ripples out from a random enemy.",
+				"long_description": "A sphere of negative energy ripples out from a random enemy, causing that enemy and all other enemies near it to take heavy damage.",
+				"graphic_id": 675,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 200,
+				"damage_modifier": 0.00833,
+				"cooldown": 300,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "circle_of_death",
+						"shoot_frame": 45,
+						"hit_sound": 133,
+						"sound_frames":
+						{
+							"1": 188
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"aoe",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 18,
+			"Name": "Drizzt",
+			"Full_Name": "Drizzt Do'Urden",
+			"Class": "Ranger",
+			"Race": "Drow",
+			"Age": 75,
 			"Alignment1": "Lawful",
 			"Alignment2": "Good",
 			"AlignmentText": "Lawful Good",
-			"Stats": "",
-			"FeatUnlock": [130, 770],
+			"AlignmentAbbr": "LG",
+			"Roles": [
+				"dps"
+			],
+			"Group": "Companions of the Hall",
 			"STR": 10,
 			"DEX": 19,
 			"CON": 14,
 			"INT": 12,
 			"WIS": 14,
 			"CHA": 11,
-			"Tags": ["male", "elf", "drow", "ranger", "dps", "lawful", "good", "companion"],
-			"Type": "Core Champions"
+			"Bio": "Despite his increasing fame (or infamy) across the Sword Coast North as a drow who dwells on the surface, is deadly in battle, fights with great agility and two enchanted scimitars, and can call on an onyx panther figurine of wondrous power to bring a battle companion to his side, Drizzt Do'Urden remains an enigma. Thoughtful and sensitive to others, Drizzt holds himself to the highest ideals but does not expect the same of others. Ever alert for treachery and danger, he speaks little but is apt to be polite (if terse) in his dealings. A perfectionist who yearns to be accepted into places and groups and to make friends widely, Drizzt is haunted by the danger he brings to those he befriends thanks to the scrutiny of Lolth and his other foes (notably the demon Errtu and the human Artemis Entreri). Those he meets see his manner as grim.",
+			"Attack_CD": 4.8,
+			"Ult_CD": 280,
+			"Swaps": "---",
+			"SeatID": 9,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				130,
+				770
+			],
+			"Tags": [
+				"male",
+				"elf",
+				"drow",
+				"ranger",
+				"dps",
+				"lawful",
+				"good",
+				"companion"
+			],
+			"BaseAttack":
+			{
+				"id": 63,
+				"name": "Dual Wield (Icingdeath)",
+				"description": "Drizzt attacks the nearest enemy with his scimitar Icingdeath.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.8,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -34,
+						"damage_frame": 2,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"2": 154
+						},
+						"update_base_attack_after": 64,
+						"animation_sequence_name": "attack"
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 66,
+				"name": "Whirl of Steel",
+				"description": "Drizzt attacks in a whirl of steel, continuing his attack until his sharpened blades don't kill an enemy in one hit.",
+				"long_description": "Drizzt attacks in a whirl of steel, continuing his attack until his sharpened blades don't kill an enemy in one hit.",
+				"graphic_id": 5905,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 280,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"damage_frame": 8
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Birdsong",
 			"HeroID": 21,
-			"SeatID": 9,
-			"IsCore": 0,
+			"Name": "Birdsong",
+			"Full_Name": "Birdsong",
+			"Class": "Bard",
+			"Race": "Tabaxi",
+			"Age": 26,
 			"Alignment1": "Lawful",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Lawful Neutral",
-			"Stats": "",
-			"FeatUnlock": [165, 995],
+			"AlignmentAbbr": "LN",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "---",
 			"STR": 9,
 			"DEX": 18,
 			"CON": 12,
 			"INT": 13,
 			"WIS": 11,
 			"CHA": 17,
-			"Tags": ["female", "tabaxi", "bard", "support", "dps", "lawful", "neutral", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Aila",
-			"HeroID": 42,
+			"Bio": "Birdsong, a cunning young Tabaxi bard, learned to defend herself while enslaved by the Yuan-ti. Proficient in playing the lute, Birdsong discovered her potential as a bard when witnessing the effect her songs had on other slaves. After her escape, she became one of the greatest minstrels of Chult. She promised herself to, one day, get revenge on the Yuan-ti who destroyed her village.",
+			"Attack_CD": 3.75,
+			"Ult_CD": 180,
+			"Swaps": "---",
 			"SeatID": 9,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				165,
+				995
+			],
+			"Tags": [
+				"female",
+				"tabaxi",
+				"bard",
+				"support",
+				"dps",
+				"lawful",
+				"neutral",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 74,
+				"name": "Flashing Blades",
+				"description": "Birdsong leaps out with a cat's grace and attacks the nearest enemies with her sword.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 3.75,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"sequences": [
+							{
+								"start_frame": 0,
+								"damage_frame": 2,
+								"hit_frames": [
+									2
+								],
+								"end_frame": 25,
+								"sound_frames":
+								{
+									"2": 199
+								},
+								"target_offset_x": -60
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 75,
+				"name": "Cat's Agility",
+				"description": "Birdsong leaps from enemy to enemy, dealing damage and stunning them.",
+				"long_description": "Birdsong leaps from enemy to enemy 5 times, dealing damage and stunning them for 5 seconds. When she's done, her normal attack cooldown is lowered by 50% for 15 seconds.",
+				"graphic_id": 2125,
+				"target": "random",
+				"num_targets": 5,
+				"aoe_radius": 0,
+				"damage_modifier": 0.0325,
+				"cooldown": 180,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"stun_on_hit": 5,
+						"stun_graphic": 1509,
+						"complete_effect":
+						{
+							"effect_string": "base_attack_speed_mult,100",
+							"apply_to_hero": true,
+							"for_time": 15
+						},
+						"animation": "split_sequence_multi_target",
+						"target_offset_x": -80,
+						"shake_on_hit": 0.1,
+						"sequences": [
+							{
+								"start_frame": 0,
+								"damage_frame": 20,
+								"end_frame": 27,
+								"hit_frames": [
+									2,
+									20
+								],
+								"sound_frames":
+								{
+									"2": 199,
+									"20": 199
+								},
+								"target_offset_x": -60
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
+		},
+		{
+			"HeroID": 42,
+			"Name": "Aila",
+			"Full_Name": "Aila",
+			"Class": "Barbarian",
+			"Race": "Wild Elf",
+			"Age": 25,
 			"Alignment1": "Choatic",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Choatic Neutral",
-			"Stats": "",
-			"FeatUnlock": [230, 1405],
+			"AlignmentAbbr": "CN",
+			"Roles": [
+				"support",
+				"tanking"
+			],
+			"Group": "Heroes of Aerois",
 			"STR": 18,
 			"DEX": 18,
 			"CON": 16,
 			"INT": 9,
 			"WIS": 13,
 			"CHA": 10,
-			"Tags": ["female", "elf", "wildelf", "barbarian", "tanking", "support", "chaotic", "neutral", "aerois", "event"],
-			"Type": "Event Champions"
+			"Bio": "Aila was found and raised by a clan of wild elves, but never truly felt like she belonged. The tartan that was found with her is the only clue she has to her lost elven roots. Aila is stubborn and proud. Whenever anyone questions her past, she simply states 'I'm a delight!'. However, her smirk holds a lifetime of anger & questions that she's held close to her heart.",
+			"Attack_CD": 6.5,
+			"Ult_CD": 280,
+			"Swaps": "---",
+			"SeatID": 9,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				230,
+				1405
+			],
+			"Tags": [
+				"female",
+				"elf",
+				"wildelf",
+				"barbarian",
+				"tanking",
+				"support",
+				"chaotic",
+				"neutral",
+				"aerois",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 188,
+				"name": "The Howling Gale",
+				"description": "Aila attacks the nearest enemy with her warhammer, the Howling Gale, knocking them back slightly.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"damage_frame": 3,
+						"effects_on_monsters": [
+							{
+								"effect_string": "increase_monster_damage_additive,0",
+								"push_back": 5,
+								"after_damage": true
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 189,
+				"name": "Storm Herald",
+				"description": "Aila unleashes lightning across all her enemies, damaging and stunning all of them.",
+				"long_description": "Aila unleashes lightning across all enemies, damaging and stunning them for 5 seconds. Deals 10% more damage for each Electrified enemy on the screen.",
+				"graphic_id": 5330,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.02,
+				"cooldown": 280,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "chain_lightning",
+						"shoot_frame": 38,
+						"hold_shoot_frame": true,
+						"sound_frames":
+						{
+							"1": 169
+						},
+						"hit_sound": 133,
+						"shoot_offset_x": 150,
+						"shoot_offset_y": 55,
+						"animation_sequence": 5,
+						"stun_on_hit": 5,
+						"projectile_details":
+						{
+							"hit_effect_graphic": "Effect_AilaLightningHit",
+							"segment_graphics": [
+								"Effect_AilaLightningProjectile"
+							]
+						},
+						"bonus_damage_from":
+						{
+							"type": "aila_electrified",
+							"amount": 0.1
+						},
+						"visual_effect_frames":
+						{
+							"2":
+							{
+								"effect": "character_lightning_stikes"
+							}
+						}
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		},
 		{
-			"Name": "Tyril",
 			"HeroID": 10,
-			"SeatID": 10,
-			"IsCore": 1,
+			"Name": "Tyril",
+			"Full_Name": "Tyril Tallguy",
+			"Class": "Druid",
+			"Race": "Firbolg",
+			"Age": 75,
 			"Alignment1": "Neutral",
 			"Alignment2": "Good",
 			"AlignmentText": "Neutral Good",
-			"Stats": "",
-			"FeatUnlock": [310, 2400],
+			"AlignmentAbbr": "NG",
+			"Roles": [
+				"support",
+				"healing",
+				"tanking"
+			],
+			"Group": "Force Grey",
 			"STR": 18,
 			"DEX": 15,
 			"CON": 15,
 			"INT": 13,
 			"WIS": 18,
 			"CHA": 13,
-			"Tags": ["male", "firbolg", "druid", "support", "tanking", "healing", "neutral", "good", "forcegrey"],
-			"Type": "Core Champions"
+			"Bio": "Tyril grew up in the wilds around his home village as the apprentice to the spiritual leader. After an accident regarding his large stature, Tyril fled the village to become a sword for hire. His regret informs his transformations and he prefers to shape-shift into small mammals and rodents.",
+			"Attack_CD": 4.7,
+			"Ult_CD": 240,
+			"Swaps": "---",
+			"SeatID": 10,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				310,
+				2400
+			],
+			"Tags": [
+				"male",
+				"firbolg",
+				"druid",
+				"support",
+				"tanking",
+				"healing",
+				"neutral",
+				"good",
+				"forcegrey"
+			],
+			"BaseAttack":
+			{
+				"id": 19,
+				"name": "Shillelagh",
+				"description": "Tyril smacks the closest enemy with his staff.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.7,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -60,
+						"damage_frame": 6,
+						"sound_frames":
+						{
+							"2": 199
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 20,
+				"name": "Sunbeam",
+				"description": "Tyril hits a line of enemies with a brilliant and deadly beam of light.",
+				"long_description": "A beam of brilliant light flashes out from Tyril's off-hand and hits all enemies in a line, targetting a random enemy.",
+				"graphic_id": 679,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.0125,
+				"cooldown": 240,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "sun_beam",
+						"sound_frames":
+						{
+							"1": 203
+						},
+						"shoot_offset_x": 50,
+						"shoot_offset_y": -30,
+						"line_damage_distance": 100
+					}
+				],
+				"tags": [
+					"ranged",
+					"line",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		},
 		{
-			"Name": "Barrowin",
 			"HeroID": 19,
-			"SeatID": 10,
-			"IsCore": 0,
+			"Name": "Barrowin",
+			"Full_Name": "Barrowin Undurr",
+			"Class": "Cleric",
+			"Race": "Dwarf",
+			"Age": 115,
 			"Alignment1": "Lawful",
 			"Alignment2": "Good",
 			"AlignmentText": "Lawful Good",
-			"Stats": "",
-			"FeatUnlock": [190, 1440],
+			"AlignmentAbbr": "LG",
+			"Roles": [
+				"support",
+				"healing"
+			],
+			"Group": "---",
 			"STR": 16,
 			"DEX": 12,
 			"CON": 15,
 			"INT": 11,
 			"WIS": 18,
 			"CHA": 10,
-			"Tags": ["female", "dwarf", "cleric", "support", "healing", "lawful", "good", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Wulfgar",
-			"HeroID": 32,
+			"Bio": "A proud daughter of Clan Undurr and a devout follower of Gorm Gulthyn, the dwarven god of vigilance and duty. She spent fifteen years in the city of Ironmaster, in Icewind Dale, overseeing and protecting her family's investment in the city's lucrative mining operations. However, she saw little action and feared that her talents were being squandered. She has recently found a home within a budding organization called the Order of the Gauntlet, which vigilantly guards against the rise of evil in all its forms.",
+			"Attack_CD": 4.1,
+			"Ult_CD": 360,
+			"Swaps": "---",
 			"SeatID": 10,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				190,
+				1440
+			],
+			"Tags": [
+				"female",
+				"dwarf",
+				"cleric",
+				"support",
+				"healing",
+				"lawful",
+				"good",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 67,
+				"name": "Mighty Hammer",
+				"description": "Barrowin smashes the nearest enemy with her mighty warhammer.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.1,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -60,
+						"damage_frame": 6,
+						"sound_frames":
+						{
+							"2": 199
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 68,
+				"name": "Holy Weapon",
+				"description": "Barrowin infuses herself with holy energy, shielding and buffing nearby allies.",
+				"long_description": "Barrowin infuses herself with holy energy, shielding allies in her column and buffing adjacent allies with six hammer stacks.",
+				"graphic_id": 1872,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 360,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "holy_weapon",
+						"shoot_frame": 28,
+						"hold_shoot_frame": true,
+						"shoot_sound": 149,
+						"hit_sound": 133,
+						"stun_on_hit": 5,
+						"effect_frames":
+						{
+							"projectile":
+							{
+								"effect_string": "barrowin_ultimate_action"
+							}
+						}
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			}
+		},
+		{
+			"HeroID": 32,
+			"Name": "Wulfgar",
+			"Full_Name": "Wulfgar, son of Beornegar",
+			"Class": "Barbarian",
+			"Race": "Human",
+			"Age": 33,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [145, 1045],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support",
+				"tanking"
+			],
+			"Group": "Companions of the Hall",
 			"STR": 20,
 			"DEX": 13,
 			"CON": 14,
 			"INT": 11,
 			"WIS": 9,
 			"CHA": 14,
-			"Tags": ["male", "human", "barbarian", "support", "tanking", "chaotic", "good", "companion", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Rosie",
-			"HeroID": 41,
+			"Bio": "Wulfgar started his life in the north as the flag bearer of the barbarian Tribe of the Elk. He was bested in the assault on Ten-Towns by Bruenor who decided his punishment would be five years and a day of service. Bruenor grew to love the tall barbarian, eventually seeing him as an adopted son. At the end of his service, Drizzt Do'Urden to taught Wulfgar the ways of combat and Bruenor crafted a mighty warhammer, named Aegis-fang. This magical warhammer bears the symbols of three of the Dwarven Gods: Moradin, Clangeddin, and Dumathoin. It is specifically attuned to Wulfgar and magically returns to his hand upon telepathic command. ",
+			"Attack_CD": 4.5,
+			"Ult_CD": 340,
+			"Swaps": "---",
 			"SeatID": 10,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				145,
+				1045
+			],
+			"Tags": [
+				"male",
+				"human",
+				"barbarian",
+				"support",
+				"tanking",
+				"chaotic",
+				"good",
+				"companion",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 134,
+				"name": "Barbarian Smash",
+				"description": "Wulfgar smashes the nearest group of enemies with a $stun_chance% chance to stun them for $stun_time seconds.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 100,
+				"damage_modifier": 1,
+				"cooldown": 4.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"stun_on_hit": 5,
+						"stun_graphic": 1509,
+						"stun_chance": 20,
+						"power_up_sequence":
+						{
+							"start_frame": 0,
+							"end_frame": 11
+						},
+						"sequences": [
+							{
+								"start_frame": 12,
+								"end_frame": 35,
+								"damage_frame": 18,
+								"target_offset_x": -90
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 135,
+				"name": "Tempus!",
+				"description": "Shouting the name of his deity, Wulfgar tosses his warhammer, Aegis-fang, at the most distant enemy, dealing damage to and stunning all enemies in a line for 10 seconds.",
+				"long_description": "Shouting the name of his deity, Wulfgar tosses his warhammer, Aegis-fang, at the most distant enemy, dealing damage to and stunning all enemies in a line for 10 seconds.",
+				"graphic_id": 3955,
+				"target": "back",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.045,
+				"cooldown": 340,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "wulfgar_hammer",
+						"shoot_frame": 21,
+						"line_damage_distance": 100,
+						"hold_for_projectiles_frame": 35,
+						"shoot_offset_x": 30,
+						"shoot_offset_y": -80,
+						"stun_on_hit": 10,
+						"stun_graphic": 1509
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			}
+		},
+		{
+			"HeroID": 41,
+			"Name": "Rosie",
+			"Full_Name": "Rosie Beestinger",
+			"Class": "Monk",
+			"Race": "Halfling",
+			"Age": 110,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [115, 800],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"dps"
+			],
+			"Group": "The C-Team",
 			"STR": 8,
 			"DEX": 16,
 			"CON": 12,
 			"INT": 12,
 			"WIS": 14,
 			"CHA": 14,
-			"Tags": ["female", "halfling", "monk", "dps", "chaotic", "good", "cteam", "event"],
-			"Type": "Event Champions"
+			"Bio": "Weighing in at just under 30 pounds and with a grandmotherly demeanor befitting her advanced age, Rosie Beestinger is easily mistaken for someone on the wrong side of the 'aggressor/victim' relationship. But this is a mix-up that few people make more than once.",
+			"Attack_CD": 4.5,
+			"Ult_CD": 220,
+			"Swaps": "---",
+			"SeatID": 10,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				115,
+				800
+			],
+			"Tags": [
+				"female",
+				"halfling",
+				"monk",
+				"dps",
+				"chaotic",
+				"good",
+				"cteam",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 185,
+				"name": "Shadow Step",
+				"description": "Rosie appears behind a random enemy and strikes them with her fists.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "simple_teleport",
+						"target_offset_x": 125,
+						"damage_frame": 30,
+						"teleport_to_frame": 13,
+						"teleport_from_frame": 40,
+						"hit_frames": [
+							21,
+							24,
+							26,
+							30
+						]
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 186,
+				"name": "Grammamancy",
+				"description": "Rosie roots all enemies and darts around, striking up to 10, then deflects all missiles for a time.",
+				"long_description": "Rosie roots all enemies on the screen and darts around striking up to 10 for massive damage, then deflects all ranged and magic attacks for 15 seconds.",
+				"graphic_id": 5213,
+				"target": "random",
+				"num_targets": 10,
+				"aoe_radius": 0,
+				"damage_modifier": 0.033,
+				"cooldown": 220,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"damage_frame": 8,
+						"is_teleport": true,
+						"power_up_sequence":
+						{
+							"start_frame": 0,
+							"end_frame": 34,
+							"repeat": true,
+							"attack_seq": "ultimate",
+							"effect_frames":
+							{
+								"1":
+								{
+									"effect_string": "monster_speed_reduce,100",
+									"for_time": 6.5,
+									"active_graphic_id": 1509,
+									"active_graphic_y": -60,
+									"activate_on_animation_cancelled": true
+								}
+							}
+						},
+						"sequences": [
+							{
+								"hit_frames": [
+									41,
+									48,
+									52
+								],
+								"start_frame": 34,
+								"damage_frame": 52,
+								"end_frame": 64,
+								"target_offset_x": -50,
+								"attack_seq": "ultimate",
+								"frame_rate": 60
+							}
+						],
+						"cooldown_sequence":
+						{
+							"start_frame": 64,
+							"attack_seq": "ultimate",
+							"effect_frames":
+							{
+								"-1":
+								{
+									"effect_string": "upgrade_remove_cooldown,2150",
+									"for_time": 15,
+									"activate_on_animation_cancelled": true
+								}
+							}
+						}
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Jamilah",
 			"HeroID": 11,
-			"SeatID": 11,
-			"IsCore": 1,
+			"Name": "Jamilah",
+			"Full_Name": "Jamilah",
+			"Class": "Barbarian",
+			"Race": "Human",
+			"Age": 35,
 			"Alignment1": "Neutral",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Neutral",
-			"Stats": "",
-			"FeatUnlock": [65, 580],
+			"AlignmentAbbr": "N",
+			"Roles": [
+				"dps"
+			],
+			"Group": "Force Grey",
 			"STR": 18,
 			"DEX": 13,
 			"CON": 17,
 			"INT": 10,
 			"WIS": 15,
 			"CHA": 14,
-			"Tags": ["female", "human", "barbarian", "dps", "neutral", "forcegrey"],
-			"Type": "Core Champions"
+			"Bio": "Jamilah is a Human Barbarian, played by actor (and part time DM) Deborah Ann Woll, and the second brand-new Force Grey character added this season. Shipwrecked as a young child, Jamilah washed up on the shores of Chult. Luckily, the people of this forbidding land took her in and raised her as one of their own. Having grown into a strong and confident young woman, she now longs to leave Chult and explore other lands, challenging anyone along her way to arm wrestling or thigh crushing contests of might.",
+			"Attack_CD": 6.5,
+			"Ult_CD": 120,
+			"Swaps": "---",
+			"SeatID": 11,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				65,
+				580
+			],
+			"Tags": [
+				"female",
+				"human",
+				"barbarian",
+				"dps",
+				"neutral",
+				"forcegrey"
+			],
+			"BaseAttack":
+			{
+				"id": 23,
+				"name": "Frenzy",
+				"description": "Jamilah attacks the closest enemy. If more enemies are nearby, she attacks up to 2 of them and reduces her base and ultimate c/ds by 2 secs.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"target_offset_x": -34,
+						"sequences": [
+							{
+								"damage_frame": 2,
+								"jump_sound": 30,
+								"sound_frames":
+								{
+									"2": 174
+								}
+							}
+						],
+						"nearby_targets": [
+							100,
+							100
+						]
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 24,
+				"name": "Rage!",
+				"description": "Jamilah leaps quickly from enemy to enemy, swinging her greatsword.",
+				"long_description": "Jamilah leaps quickly from enemy to enemy, swinging her greatsword through them in a feat of strength and agility. She hits 6 times in total.",
+				"graphic_id": 673,
+				"target": "random",
+				"num_targets": 6,
+				"aoe_radius": 0,
+				"damage_modifier": 0.02917,
+				"cooldown": 120,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"target_offset_x": -80,
+						"shake_on_hit": 0.1,
+						"sequences": [
+							{
+								"start_frame": 0,
+								"damage_frame": 3,
+								"end_frame": 9,
+								"sound_frames":
+								{
+									"3": 208
+								}
+							},
+							{
+								"start_frame": 9,
+								"damage_frame": 14,
+								"end_frame": 20,
+								"sound_frames":
+								{
+									"3": 209
+								}
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Strix",
 			"HeroID": 23,
-			"SeatID": 11,
-			"IsCore": 0,
+			"Name": "Strix",
+			"Full_Name": "Strix Beestinger",
+			"Class": "Sorcerer",
+			"Race": "Tiefling",
+			"Age": 82,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [155, 1345],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "Waffle Crew",
 			"STR": 10,
 			"DEX": 12,
 			"CON": 14,
 			"INT": 16,
 			"WIS": 11,
 			"CHA": 18,
-			"Tags": ["female", "tiefling", "sorcerer", "dps", "support", "chaotic", "good", "wafflecrew", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Warden",
-			"HeroID": 36,
+			"Bio": "The sorcerer known as Strix hails from Sigil, the City of Doors at the center of the multiverse. Very little is known of Strix's heritage, even to herself, but it was recently discovered that she was a powerful member of the Skizziks family, who long ago made a pact with Asmodeus, ruler of the Nine Hells, to become Tieflings. Strix is careful, suspicious, and paranoid. She assumes the worst in everyone and is always ready to run away or hide. She lacks basic manners and maintains poor personal hygiene, exemplified by the collection of filthy oddities she hoards within her robes. As a child, Strix witnessed a shadowy creature slaughter her friends at the bakery where she worked, but was spared for unknown reasons. Her survivor's guilt drives her to try and help those in need, no matter the personal cost.",
+			"Attack_CD": 6.5,
+			"Ult_CD": 270,
+			"Swaps": "---",
 			"SeatID": 11,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				155,
+				1345
+			],
+			"Tags": [
+				"female",
+				"tiefling",
+				"sorcerer",
+				"dps",
+				"support",
+				"chaotic",
+				"good",
+				"wafflecrew",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 87,
+				"name": "Fireball",
+				"description": "Strix throws a fireball at a random enemy, dealing a small amount of aoe damage.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 150,
+				"damage_modifier": 1,
+				"cooldown": 6.5,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "green_fireball",
+						"shoot_frame": 10,
+						"sound_frames":
+						{
+							"1": 153
+						},
+						"hit_sound": 142
+					}
+				],
+				"tags": [
+					"ranged",
+					"aoe"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 88,
+				"name": "Polymorph Staff",
+				"description": "Strix's staff polymorphs into a random object, changing the way she attacks for a brief period.",
+				"long_description": "Strix's staff polymorphs into a pie plate, an owlbear plushy, or a flying broom, and changes her base attack for a brief period of time.",
+				"graphic_id": 2606,
+				"target": "none",
+				"num_targets": 0,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 270,
+				"animations": [
+					{
+						"type": "strix_ultimate",
+						"no_damage_display": true
+					}
+				],
+				"tags": [
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 36,
+			"Name": "Warden",
+			"Full_Name": "Warden",
+			"Class": "Warlock",
+			"Race": "Warforged",
+			"Age": 12,
 			"Alignment1": "Choatic",
 			"Alignment2": "Evil",
 			"AlignmentText": "Choatic Evil",
-			"Stats": "",
-			"FeatUnlock": [140, 1470],
+			"AlignmentAbbr": "CE",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "---",
 			"STR": 14,
 			"DEX": 16,
 			"CON": 12,
 			"INT": 8,
 			"WIS": 11,
 			"CHA": 18,
-			"Tags": ["warforged", "construct", "warlock", "support", "dps", "chaotic", "evil", "event"],
-			"Type": "Event Champions"
-		},
-		{
-			"Name": "Avren",
-			"HeroID": 51,
+			"Bio": "Forged to be the jailer for a prison filled with eldritch horrors in a faraway land, Warden became corrupted by the monstrosities they sought to keep locked away. Now they journey at the behest of an otherworldly master, seeking souls for the insatiable Dark Hunger to corrupt and feast upon.",
+			"Attack_CD": 4.75,
+			"Ult_CD": 200,
+			"Swaps": "---",
 			"SeatID": 11,
 			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				140,
+				1470
+			],
+			"Tags": [
+				"warforged",
+				"construct",
+				"warlock",
+				"support",
+				"dps",
+				"chaotic",
+				"evil",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 153,
+				"name": "Hex Weapon Armblade",
+				"description": "Warden leaps to a random enemy and attacks them with their armblade.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.75,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "split_sequence_multi_target",
+						"sequences": [
+							{
+								"damage_frame": 5,
+								"start_frame": 0,
+								"end_frame": 14,
+								"target_offset_x": -45
+							},
+							{
+								"type": "melee_attack",
+								"damage_frame": 19,
+								"start_frame": 15,
+								"end_frame": 24,
+								"target_offset_x": -45
+							},
+							{
+								"type": "melee_attack",
+								"damage_frame": 38,
+								"start_frame": 25,
+								"end_frame": 51,
+								"target_offset_x": -60
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 154,
+				"name": "Hunger of Hadar",
+				"description": "Warden opens a rift to the void, pulling all enemies to one spot on the screen.",
+				"long_description": "Warden opens a rift to the void, damaging and momentarily stunning all enemies and pulling them to a position slightly in front of the formation.",
+				"graphic_id": 4498,
+				"target": "none",
+				"num_targets": 0,
+				"aoe_radius": 0,
+				"damage_modifier": 0.04,
+				"cooldown": 200,
+				"animations": [
+					{
+						"type": "warden_ultimate",
+						"percent_to_formation_start": 0
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
+		},
+		{
+			"HeroID": 51,
+			"Name": "Avren",
+			"Full_Name": "Avren",
+			"Class": "Warlock / Sorcerer",
+			"Race": "Half-Elf",
+			"Age": 40,
 			"Alignment1": "Choatic",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Choatic Neutral",
-			"Stats": "",
-			"FeatUnlock": [95, 960],
+			"AlignmentAbbr": "CN",
+			"Roles": [
+				"support"
+			],
+			"Group": "---",
 			"STR": 8,
 			"DEX": 16,
 			"CON": 15,
 			"INT": 13,
 			"WIS": 10,
 			"CHA": 18,
-			"Tags": ["male", "half-elf", "warlock", "sorcerer", "support", "chaotic", "neutral", "event"],
-			"Type": "Event Champions"
+			"Bio": "Avren is an embodiment of mischief; a trickster god in humanoid form. Long ago, he tricked an ancient being into giving him magic and immortality. This power also came with a curse: whenever Avren dies, he will return to life with a new body and varying abilities. While Avren's body may change, however, his soul and his undying love for his wife, Sofious, always remains. The two have remained married for centuries, seeking each other out to reunite in each lifetime.",
+			"Attack_CD": 6.5,
+			"Ult_CD": 260,
+			"Swaps": "---",
+			"SeatID": 11,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				95,
+				960
+			],
+			"Tags": [
+				"male",
+				"half-elf",
+				"warlock",
+				"sorcerer",
+				"support",
+				"chaotic",
+				"neutral",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 231,
+				"name": "Spectral Shards",
+				"description": "Avren tosses three spectral shards at random enemies. One does damage, one stuns, and one is fake and only briefly staggers the enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 3,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6.5,
+				"animations": [
+					{
+						"type": "avren_base",
+						"projectile": "avren_dagger",
+						"shoot_frame": 18,
+						"projectile_delay_no_pause": 0.2,
+						"shoot_sound": 149,
+						"hit_sound": 133,
+						"animation_sequence": 3,
+						"shard_effects": [
+							{
+								"damage": 0
+							},
+							{
+								"damage": 0,
+								"stun_time": 2
+							},
+							{
+								"damage": 1
+							}
+						]
+					}
+				],
+				"tags": [
+					"ranged",
+					"multitarget"
+				],
+				"damage_types": [
+					"magic"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 233,
+				"name": "Insignificance",
+				"description": "Avren casts Reduce on all his enemies and Enlarge on himself, then begins kicking the teenie-tiny enemies around.",
+				"long_description": "Avren casts Reduce on all enemies on the screen, dealing some damage and reducing their size by half and their damage done by 50% for 15 seconds. He also casts Enlarge on himself for the duration, and during that time his base attack changes from Spectral Shards to Kick.",
+				"graphic_id": 6537,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.025,
+				"cooldown": 260,
+				"animations": [
+					{
+						"type": "avren_ultimate",
+						"shoot_frame": 38,
+						"attack_id": 232,
+						"duration": 15,
+						"monster_damage_reduce": 50,
+						"monster_speed_reduction": 50,
+						"animation_sequence": 6
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		},
 		{
-			"Name": "Arkhan",
 			"HeroID": 12,
-			"SeatID": 12,
-			"IsCore": 1,
+			"Name": "Arkhan",
+			"Full_Name": "Arkhan",
+			"Class": "Paladin",
+			"Race": "Dragonborn",
+			"Age": 40,
 			"Alignment1": "Neutral",
 			"Alignment2": "Evil",
 			"AlignmentText": "Neutral Evil",
-			"Stats": "",
-			"FeatUnlock": [35, 450],
+			"AlignmentAbbr": "NE",
+			"Roles": [
+				"tanking",
+				"dps"
+			],
+			"Group": "Force Grey",
 			"STR": 20,
 			"DEX": 14,
 			"CON": 14,
 			"INT": 10,
 			"WIS": 12,
 			"CHA": 18,
-			"Tags": ["male", "dragonborn", "paladin", "dps", "tanking", "neutral", "evil", "forcegrey"],
-			"Type": "Core Champions"
+			"Bio": "Arkhan the Cruel is a dragonborn oathbreaker paladin in the service of the five-headed dragon goddess Tiamat. Due to 'The Wreath of the Prism' that he wears around his neck, he has gained control of the vicious manticore Chango.",
+			"Attack_CD": 3.9,
+			"Ult_CD": 180,
+			"Swaps": "---",
+			"SeatID": 12,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				35,
+				450
+			],
+			"Tags": [
+				"male",
+				"dragonborn",
+				"paladin",
+				"dps",
+				"tanking",
+				"neutral",
+				"evil",
+				"forcegrey"
+			],
+			"BaseAttack":
+			{
+				"id": 25,
+				"name": "Tiamat's Fury",
+				"description": "Arkhan attacks the closest enemy with the fury of Tiamat.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 3.9,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"target_offset_x": -34,
+						"damage_frame": 2,
+						"jump_sound": 30,
+						"sound_frames":
+						{
+							"2": 144
+						}
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 26,
+				"name": "Flame Breath",
+				"description": "Arkhan breaths deadly dragon fire on a cone of enemies.",
+				"long_description": "Arkhan rushes forward to the nearest enemy and breaths dragon fire on them and all enemies in a large cone.",
+				"graphic_id": 667,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.01111,
+				"cooldown": 180,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"jump_to_target": true,
+						"target_offset_x": -234,
+						"projectile": "fire_breath",
+						"shoot_frame": 15,
+						"sound_frames":
+						{
+							"2": 148
+						},
+						"shoot_offset_x": 36,
+						"shoot_offset_y": -37,
+						"cone_damage_distance": 2000,
+						"cone_damage_angle": 60
+					}
+				],
+				"tags": [
+					"ranged",
+					"cone",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		},
 		{
-			"Name": "Zorbu",
 			"HeroID": 22,
-			"SeatID": 12,
-			"IsCore": 0,
+			"Name": "Zorbu",
+			"Full_Name": "Zorbu 'Thunderbolt' Natten",
+			"Class": "Ranger",
+			"Race": "Gnome",
+			"Age": 325,
 			"Alignment1": "Choatic",
 			"Alignment2": "Good",
 			"AlignmentText": "Choatic Good",
-			"Stats": "",
-			"FeatUnlock": [60, 795],
+			"AlignmentAbbr": "CG",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "CNE Original",
 			"STR": 8,
 			"DEX": 17,
 			"CON": 14,
 			"INT": 12,
 			"WIS": 16,
 			"CHA": 13,
-			"Tags": ["male", "gnome", "ranger", "dps", "support", "chaotic", "good", "event", "cneoriginal"],
-			"Type": "Event Champions"
+			"Bio": "Zorbu grew up in a small village on the slopes of the mountains south of Yartar. He lived a typical gnomish childhood: tinkering with mechanical toys, pulling pranks on unsuspecting neighbors, and exploring the woodlands covering the mountains in the company of a local dwarf ranger, Galor Rockshield. One night an army of drow and their minions descended upon the village in force. Galor saved Zorbu's life, but many others were killed, including Zorbu's parents. From that day forth, Zorbu trained under Galor as a ranger, vowing revenge upon the drow and any who claim allegiance to them. Cunning and imaginative, Zorbu makes use of his tinkering skills to wield an impossibly large crossbow called Thunderbolt.",
+			"Attack_CD": 6.2,
+			"Ult_CD": 240,
+			"Swaps": "---",
+			"SeatID": 12,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				60,
+				795
+			],
+			"Tags": [
+				"male",
+				"gnome",
+				"ranger",
+				"dps",
+				"support",
+				"chaotic",
+				"good",
+				"event",
+				"cneoriginal"
+			],
+			"BaseAttack":
+			{
+				"id": 82,
+				"name": "Massive Bolt",
+				"description": "Zorbu fires a bolt from his massive crossbow at a random enemy, dealing damage to all.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 6.2,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile_graphic_id": 1,
+						"projectile": "impale",
+						"shoot_frame": 5,
+						"hit_sound": 142,
+						"sound_frames":
+						{
+							"1": 163
+						},
+						"line_damage_distance": 100
+					}
+				],
+				"tags": [
+					"ranged"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 83,
+				"name": "Mechanical Squirrel",
+				"description": "Zorbu winds up a small mechanical squirrel and sends it skittering towards a random enemy.",
+				"long_description": "Zorbu winds up a small mechanical squirrel and sends it skittering towards a random enemy. When it reaches them, it detonates the hidden vial of Alchemist's fire inside, and does AOE damage to all nearby enemies.",
+				"graphic_id": 2430,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 200,
+				"damage_modifier": 0.014,
+				"cooldown": 240,
+				"animations": [
+					{
+						"type": "ranged_attack",
+						"projectile": "squirrel",
+						"shoot_frame": 35,
+						"shoot_offset_x": 43,
+						"shoot_offset_y": 51
+					}
+				],
+				"tags": [
+					"ranged",
+					"ultimate"
+				],
+				"damage_types": [
+					"ranged"
+				]
+			}
 		},
 		{
-			"Name": "Azaka",
 			"HeroID": 30,
-			"SeatID": 12,
-			"IsCore": 1,
+			"Name": "Azaka",
+			"Full_Name": "Azaka Stormfang",
+			"Class": "Fighter",
+			"Race": "Human",
+			"Age": 40,
 			"Alignment1": "Lawful",
 			"Alignment2": "Neutral",
 			"AlignmentText": "Lawful Neutral",
-			"Stats": "",
-			"FeatUnlock": [80, 1600],
+			"AlignmentAbbr": "LN",
+			"Roles": [
+				"support",
+				"dps"
+			],
+			"Group": "---",
 			"STR": 19,
 			"DEX": 14,
 			"CON": 16,
 			"INT": 11,
 			"WIS": 9,
 			"CHA": 14,
-			"Tags": ["female", "human", "lycanthrope", "fighter", "lawful", "neutral", "support", "dps"],
-			"Type": "Core Champions"
+			"Bio": "Azaka Stormfang was once a guide who operated out of Port Nyanzaru on Chult. She originally concealed her curse of lycanthropy from the champions, as she has lost many friends to that revelation in the past. Her true self was revealed to the Champions after she valiantly helped them collect 3 of the 9 puzzle cubes they needed to defeat the villain Acererak in the Tomb of the Nine Gods. She was killed in the battle, but was able to be resurrected after the champions defeated Acererak's soulmonger. Now, she travels with her new friends, as a champion.",
+			"Attack_CD": 4.5,
+			"Ult_CD": 380,
+			"Swaps": "---",
+			"SeatID": 12,
+			"IsCore": 1,
+			"Type": "Core Champions",
+			"FeatUnlockLvl": [
+				80,
+				1600
+			],
+			"Tags": [
+				"female",
+				"human",
+				"lycanthrope",
+				"fighter",
+				"lawful",
+				"neutral",
+				"support",
+				"dps"
+			],
+			"BaseAttack":
+			{
+				"id": 125,
+				"name": "Pick Them Off",
+				"description": "Azaka leaps into the air and strikes a random enemy; 33% cleave chance",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "random",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 1,
+				"cooldown": 4.5,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"power_up_sequence":
+						{
+							"pause_at_start": 0.2,
+							"start_frame": 0,
+							"end_frame": 5
+						},
+						"sequences": [
+							{
+								"start_frame": 5,
+								"damage_frame": 9,
+								"end_frame": 20
+							}
+						]
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 126,
+				"name": "Mask of the Beast",
+				"description": "Azaka dons her Mask of the Beast, summoning 2 tigers to her side for 30 seconds, the tigers attack every 5 seconds",
+				"long_description": "Azaka dons her Mask of the Beast, summoning 2 tigers to her side that attack every 5 seconds. The tigers stay for 30 seconds. If Azaka specs with Lycanthrope Forever the tiger attacks count towards her weretiger transformation, and her weretiger cooldown is paused during her Ultimate. If she specs with Resist the Curse, the tigers' attacks cause enemies to drop gold even if they aren't killed.",
+				"graphic_id": 3628,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0,
+				"cooldown": 380,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"animation": "spawn_tigers",
+						"visual_effect_frames":
+						{
+							"30":
+							{
+								"effect": "spawn_tiger",
+								"index": 0
+							},
+							"40":
+							{
+								"effect": "spawn_tiger",
+								"index": 1
+							}
+						},
+						"start_frame": 0,
+						"end_frame": 54,
+						"effect_frames":
+						{
+							"-1":
+							{
+								"effect_string": "azaka_ultimate,127",
+								"for_time": 30,
+								"apply_to_hero": true
+							}
+						},
+						"no_damage_display": true
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"melee"
+				]
+			}
 		},
 		{
-			"Name": "Nerys",
 			"HeroID": 37,
-			"SeatID": 12,
-			"IsCore": 0,
+			"Name": "Nerys",
+			"Full_Name": "Nerys Kathon",
+			"Class": "Cleric",
+			"Race": "Human",
+			"Age": 26,
 			"Alignment1": "Lawful",
 			"Alignment2": "Good",
 			"AlignmentText": "Lawful Good",
-			"Stats": "",
-			"FeatUnlock": [55, 790],
+			"AlignmentAbbr": "LG",
+			"Roles": [
+				"support",
+				"healing"
+			],
+			"Group": "Heroes of Baldur's Gate",
 			"STR": 16,
 			"DEX": 13,
 			"CON": 15,
 			"INT": 12,
 			"WIS": 17,
 			"CHA": 15,
-			"Tags": ["female", "human", "cleric", "support", "healing", "lawful", "good", "baldursgate", "event"],
-			"Type": "Event Champions"
+			"Bio": "Nerys Kathon joined the Heroes of Baldur's Gate on a mission to protect her church, but was soon pulled into a harrowing journey to Barovia and beyond. As a cleric of Kelemvor, she grew up in service to the dying and the dead and developed a cold detachment to anything outside of duties to her faith. Beneath that frosty exterior is a loyal and caring adventurer, but it's a side she rarely shows to anyone outside her closest friends.",
+			"Attack_CD": 6.8,
+			"Ult_CD": 280,
+			"Swaps": "---",
+			"SeatID": 12,
+			"IsCore": 0,
+			"Type": "Event Champions",
+			"FeatUnlockLvl": [
+				55,
+				790
+			],
+			"Tags": [
+				"female",
+				"human",
+				"cleric",
+				"support",
+				"healing",
+				"lawful",
+				"good",
+				"baldursgate",
+				"event"
+			],
+			"BaseAttack":
+			{
+				"id": 155,
+				"name": "Dash and Slash",
+				"description": "Nerys cleaves all targets near the closest enemy.",
+				"long_description": "",
+				"graphic_id": 0,
+				"target": "front",
+				"num_targets": 1,
+				"aoe_radius": 150,
+				"damage_modifier": 1,
+				"cooldown": 6.8,
+				"animations": [
+					{
+						"type": "melee_attack",
+						"damage_frame": 4
+					}
+				],
+				"tags": [
+					"melee"
+				],
+				"damage_types": [
+					"melee"
+				]
+			},
+			"UltAttack":
+			{
+				"id": 156,
+				"name": "Tip the Scales",
+				"description": "Nerys blasts all enemies, reducing their damage and increasing party damage.",
+				"long_description": "Nerys leaps into the field, unleashing a halo of divine energy. It hits all enemies and decreases their damage done while increasing the damage the party does.",
+				"graphic_id": 4576,
+				"target": "all",
+				"num_targets": 1,
+				"aoe_radius": 0,
+				"damage_modifier": 0.03,
+				"cooldown": 280,
+				"animations": [
+					{
+						"type": "nerys_ultimate",
+						"damage_frame": 10,
+						"effect_on_monsters":
+						{
+							"effect_string": "monster_damage_decrease,50",
+							"active_graphic_id": 1436,
+							"active_graphic_y": -70,
+							"after_damage": true,
+							"for_time": 30
+						},
+						"effect_frames":
+						{
+							"hit":
+							{
+								"effect_string": "global_dps_multiplier_mult,300",
+								"for_time": 30,
+								"activate_on_animation_cancelled": true
+							}
+						}
+					}
+				],
+				"tags": [
+					"melee",
+					"ultimate"
+				],
+				"damage_types": [
+					"magic"
+				]
+			}
 		}
-	],
-	"Groups": []
+	]
 }
